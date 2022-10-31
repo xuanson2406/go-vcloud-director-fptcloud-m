@@ -359,6 +359,58 @@ func (vm *VM) ChangeNetworkConfig(networks []map[string]interface{}) (Task, erro
 		types.MimeNetworkConnectionSection, "error changing network config: %s", networkSection)
 }
 
+// Add network to VM
+func (vm *VM) CreateNetworkConfig(networks []map[string]interface{}, ip string) (Task, error) {
+	err := vm.Refresh()
+	if err != nil {
+		return Task{}, fmt.Errorf("error refreshing VM before running customization: %s", err)
+	}
+	networkSection, err := vm.GetNetworkConnectionSection()
+	if err != nil {
+		return Task{}, fmt.Errorf("could not retrieve network connection for VM: %s", err)
+	}
+	for index, network := range networks {
+		ipAllocationMode := types.IPAllocationModeNone
+		ipAddress := "Any"
+		// TODO: Review current behaviour of using DHCP when left blank
+		if ip == "" || ip == "dhcp" || network["ip"] == "dhcp" {
+			ipAllocationMode = types.IPAllocationModeDHCP
+		} else if ip == "allocated" || network["ip"] == "allocated" {
+			ipAllocationMode = types.IPAllocationModePool
+		} else if ip == "none" || network["ip"] == "none" {
+			ipAllocationMode = types.IPAllocationModeNone
+		} else if ip != "" || network["ip"] != "" {
+			ipAllocationMode = types.IPAllocationModeManual
+			// TODO: Check a valid IP has been given
+			ipAddress = ip
+		}
+		networkConnection := &types.NetworkConnection{
+			Network:                 fmt.Sprint(network["network"]),
+			NeedsCustomization:      true,
+			NetworkConnectionIndex:  index,
+			IPAddress:               ipAddress,
+			IsConnected:             true,
+			IPAddressAllocationMode: ipAllocationMode,
+			NetworkAdapterType:      fmt.Sprint(network["NetworkAdapterType"]),
+		}
+		networkSection.NetworkConnection = append(networkSection.NetworkConnection, networkConnection)
+		if network["is_primary"] == true {
+			networkSection.PrimaryNetworkConnectionIndex = index
+		}
+	}
+
+	networkSection.Xmlns = types.XMLNamespaceVCloud
+	networkSection.Ovf = types.XMLNamespaceOVF
+	networkSection.Info = "Specifies the available VM network connections"
+
+	apiEndpoint := urlParseRequestURI(vm.VM.HREF)
+	apiEndpoint.Path += "/networkConnectionSection/"
+
+	// Return the task
+	return vm.client.ExecuteTaskRequest(apiEndpoint.String(), http.MethodPut,
+		types.MimeNetworkConnectionSection, "error changing network config: %s", networkSection)
+}
+
 // Deprecated: use vm.ChangeMemory instead
 func (vm *VM) ChangeMemorySize(size int) (Task, error) {
 
