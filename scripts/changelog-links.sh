@@ -24,7 +24,7 @@ else
   SED="sed -i.bak -r -e"
 fi
 
-GOVCD_URL="https:\/\/github.com\/vmware\/go-vcloud-director-fptcloud\/pull"
+GOVCD_URL="https:\/\/github.com\/xuanson2406\/go-vcloud-director-fptcloud\/pull"
 
 $SED "s/GH-([0-9]+)/\[#\1\]\($GOVCD_URL\/\1\)/g" -e 's/\[\[#(.+)([0-9])\)]$/(\[#\1\2))/g' CHANGELOG.md
 if [ "$?" != "0" ] ; then exit 1 ; fi

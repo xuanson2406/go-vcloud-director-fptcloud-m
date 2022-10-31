@@ -48,7 +48,7 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/govcd"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/govcd"
 )
 
 type Config struct {
@@ -174,7 +174,7 @@ func main() {
 	for N, item := range org.Org.Link {
 		fmt.Printf("%3d %-40s %s\n", N, item.Name, item.Type)
 		// Retrieve the first catalog name for further usage
-		if item.Type == "application/vnd.vmware.vcloud.catalog+xml" && catalogName == "" {
+		if item.Type == "application/vnd.xuanson2406.vcloud.catalog+xml" && catalogName == "" {
 			catalogName = item.Name
 		}
 	}

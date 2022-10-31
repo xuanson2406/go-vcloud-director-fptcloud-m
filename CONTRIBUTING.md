@@ -4,12 +4,12 @@ Welcome! We gladly accept contributions from the community. If you wish
 to contribute code and you have not signed our contributor license
 agreement (CLA), our bot will update the issue when you open a pull
 request. For any questions about the CLA process, please refer to our
-[FAQ](https://cla.vmware.com/faq).
+[FAQ](https://cla.xuanson2406.com/faq).
 
 ## Community
 
-VMware Cloud Director Go(lang) and Terraform contributors can be found here: 
-https://vmwarecode.slack.com, #vcd-terraform-dev
+xuanson2406 Cloud Director Go(lang) and Terraform contributors can be found here: 
+https://xuanson2406code.slack.com, #vcd-terraform-dev
 
 ## Logging Bugs
 
@@ -70,13 +70,13 @@ to adapt it to your own work style.
 
 ### Sign the Contributor License Agreement (CLA)
 
-VMware Apache-licensed projects require all contributors to sign a CLA. 
-Visit https://cla.vmware.com and follow steps presented there. 
+xuanson2406 Apache-licensed projects require all contributors to sign a CLA. 
+Visit https://cla.xuanson2406.com and follow steps presented there. 
 
 ### Fork the Repo
 
 Navigate to the [go-vcloud-director-fptcloud repo on
-GitHub](https://github.com/vmware/go-vcloud-director-fptcloud) and use the 'Fork' button to
+GitHub](https://github.com/xuanson2406/go-vcloud-director-fptcloud) and use the 'Fork' button to
 create a forked repository under your GitHub account.  This gives you a copy 
 of the repo for pull requests back to go-vcloud-director-fptcloud. 
 
@@ -87,10 +87,10 @@ repo as the upstream remote repository. The project uses Go modules so the path 
 
 ``` shell
 
-cd $GOPATH/src/github.com/vmware
+cd $GOPATH/src/github.com/xuanson2406
 git clone https://github.com/imahacker/go-vcloud-director-fptcloud
 cd go-vcloud-director-fptcloud
-git remote add upstream https://github.com/vmware/go-vcloud-director-fptcloud.git
+git remote add upstream https://github.com/xuanson2406/go-vcloud-director-fptcloud.git
 ```
 
 The last git command prepares your clone to pull changes from the
@@ -152,16 +152,16 @@ details.
 
 ### Create a Pull Request
 
-To contribute your feature, create a pull request by going to the [go-vcloud-director-fptcloud upstream repo on GitHub](https://github.com/vmware/go-vcloud-director-fptcloud) and pressing the 'New pull request' button. 
+To contribute your feature, create a pull request by going to the [go-vcloud-director-fptcloud upstream repo on GitHub](https://github.com/xuanson2406/go-vcloud-director-fptcloud) and pressing the 'New pull request' button. 
 
 Select 'compare across forks' and select imahacker/go-vcloud-director-fptcloud as 'head fork'
 and foo-api-fix-22 as the 'compare' branch.  Leave the base fork as 
-vmware/go-vcloud-director-fptcloud and main. 
+xuanson2406/go-vcloud-director-fptcloud and main. 
 
 ### Wait...
 
 Your pull request will automatically build in [Travis
-CI](https://travis-ci.org/vmware/go-vcloud-director-fptcloud/).  Have a look and correct
+CI](https://travis-ci.org/xuanson2406/go-vcloud-director-fptcloud/).  Have a look and correct
 any failures.
 
 Meanwhile a committer will look the request over and do one of three things: 

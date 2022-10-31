@@ -10,8 +10,8 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/util"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/util"
 )
 
 type AdminVdc struct {
@@ -147,7 +147,7 @@ func (adminOrg *AdminOrg) GetAdminVDCByNameOrId(identifier string, refresh bool)
 
 // CreateVdc creates a VDC with the given params under the given organization.
 // Returns an AdminVdc.
-// API Documentation: https://code.vmware.com/apis/220/vcloud#/doc/doc/operations/POST-VdcConfiguration.html
+// API Documentation: https://code.xuanson2406.com/apis/220/vcloud#/doc/doc/operations/POST-VdcConfiguration.html
 // Deprecated in favor of adminOrg.CreateOrgVdcAsync
 func (adminOrg *AdminOrg) CreateVdc(vdcConfiguration *types.VdcConfiguration) (Task, error) {
 	err := validateVdcConfiguration(vdcConfiguration)
@@ -166,7 +166,7 @@ func (adminOrg *AdminOrg) CreateVdc(vdcConfiguration *types.VdcConfiguration) (T
 	adminVdc := NewAdminVdc(adminOrg.client)
 
 	_, err = adminOrg.client.ExecuteRequest(vdcCreateHREF.String(), http.MethodPost,
-		"application/vnd.vmware.admin.createVdcParams+xml", "error creating VDC: %s", vdcConfiguration, adminVdc.AdminVdc)
+		"application/vnd.xuanson2406.admin.createVdcParams+xml", "error creating VDC: %s", vdcConfiguration, adminVdc.AdminVdc)
 	if err != nil {
 		return Task{}, err
 	}
@@ -218,7 +218,7 @@ func (adminVdc *AdminVdc) Refresh() error {
 // UpdateAsync updates VDC from current VDC struct contents.
 // Any differences that may be legally applied will be updated.
 // Returns an error if the call to vCD fails.
-// API Documentation: https://vdc-repo.vmware.com/vmwb-repository/dcr-public/7a028e78-bd37-4a6a-8298-9c26c7eeb9aa/09142237-dd46-4dee-8326-e07212fb63a8/doc/doc/operations/PUT-Vdc.html
+// API Documentation: https://vdc-repo.xuanson2406.com/vmwb-repository/dcr-public/7a028e78-bd37-4a6a-8298-9c26c7eeb9aa/09142237-dd46-4dee-8326-e07212fb63a8/doc/doc/operations/PUT-Vdc.html
 func (adminVdc *AdminVdc) UpdateAsync() (Task, error) {
 	apiVersion, err := adminVdc.client.MaxSupportedVersion()
 	if err != nil {
@@ -237,7 +237,7 @@ func (adminVdc *AdminVdc) UpdateAsync() (Task, error) {
 // Update function updates an Admin VDC from current VDC struct contents.
 // Any differences that may be legally applied will be updated.
 // Returns an empty AdminVdc struct and error if the call to vCD fails.
-// API Documentation: https://vdc-repo.vmware.com/vmwb-repository/dcr-public/7a028e78-bd37-4a6a-8298-9c26c7eeb9aa/09142237-dd46-4dee-8326-e07212fb63a8/doc/doc/operations/PUT-Vdc.html
+// API Documentation: https://vdc-repo.xuanson2406.com/vmwb-repository/dcr-public/7a028e78-bd37-4a6a-8298-9c26c7eeb9aa/09142237-dd46-4dee-8326-e07212fb63a8/doc/doc/operations/PUT-Vdc.html
 func (adminVdc *AdminVdc) Update() (AdminVdc, error) {
 	apiVersion, err := adminVdc.client.MaxSupportedVersion()
 	if err != nil {
@@ -368,7 +368,7 @@ func createVdcAsyncV97(adminOrg *AdminOrg, vdcConfiguration *types.VdcConfigurat
 	adminVdc := NewAdminVdc(adminOrg.client)
 
 	_, err = adminOrg.client.ExecuteRequest(vdcCreateHREF.String(), http.MethodPost,
-		"application/vnd.vmware.admin.createVdcParams+xml", "error creating VDC: %s",
+		"application/vnd.xuanson2406.admin.createVdcParams+xml", "error creating VDC: %s",
 		vdcConfiguration, adminVdc.AdminVdc)
 	if err != nil {
 		return Task{}, err

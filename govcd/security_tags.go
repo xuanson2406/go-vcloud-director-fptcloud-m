@@ -2,8 +2,9 @@ package govcd
 
 import (
 	"fmt"
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
 	"net/url"
+
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
 )
 
 // GetAllSecurityTaggedEntities Retrieves the list of entities that have at least one tag assigned to it.

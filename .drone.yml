@@ -16,7 +16,7 @@ notify:
     on_failure: true
 publish:
   coverage:
-    server: https://coverage.vmware.run
+    server: https://coverage.xuanson2406.run
     token: $$COVERAGE_TOKEN
     when:
       branch: main

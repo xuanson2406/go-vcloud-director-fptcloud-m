@@ -7,7 +7,7 @@ package govcd
 import (
 	"fmt"
 
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
 )
 
 // NsxtFirewall contains a types.NsxtFirewallRuleContainer which encloses three types of rules -

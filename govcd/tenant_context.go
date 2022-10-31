@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
 )
 
 // TenantContext stores the information needed for an object to be used in the context of a given organization

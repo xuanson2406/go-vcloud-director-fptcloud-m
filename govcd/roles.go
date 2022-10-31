@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"net/url"
 
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
 )
 
 // Role uses OpenAPI endpoint to operate user roles

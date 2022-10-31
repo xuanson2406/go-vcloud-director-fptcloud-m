@@ -9,11 +9,11 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/util"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/util"
 
 	"github.com/hashicorp/go-version"
 
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
 )
 
 // endpointMinApiVersions holds mapping of OpenAPI endpoints and API versions they were introduced in.

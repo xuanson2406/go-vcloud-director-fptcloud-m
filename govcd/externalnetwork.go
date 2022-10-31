@@ -7,9 +7,10 @@ package govcd
 import (
 	"errors"
 	"fmt"
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/util"
 	"net/http"
+
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/util"
 )
 
 type ExternalNetwork struct {
@@ -31,7 +32,7 @@ func getExternalNetworkHref(client *Client) (string, error) {
 	}
 
 	for _, extensionLink := range extensions.Link {
-		if extensionLink.Type == "application/vnd.vmware.admin.vmwExternalNetworkReferences+xml" {
+		if extensionLink.Type == "application/vnd.xuanson2406.admin.vmwExternalNetworkReferences+xml" {
 			return extensionLink.HREF, nil
 		}
 	}

@@ -9,7 +9,7 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/govcd"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/govcd"
 )
 
 var (

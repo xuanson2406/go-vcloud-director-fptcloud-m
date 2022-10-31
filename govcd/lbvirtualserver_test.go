@@ -10,7 +10,7 @@ package govcd
 import (
 	"fmt"
 
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
 	. "gopkg.in/check.v1"
 )
 
@@ -203,7 +203,7 @@ func buildTestLBVirtualServerPrereqs(node1Ip, node2Ip, componentsName string, ch
 
 	lbAppRuleConfig := &types.LbAppRule{
 		Name:   componentsName,
-		Script: "acl vmware_page url_beg / vmware redirect location https://www.vmware.com/ ifvmware_page",
+		Script: "acl xuanson2406_page url_beg / xuanson2406 redirect location https://www.xuanson2406.com/ ifxuanson2406_page",
 	}
 
 	// Create prerequisites - application rule

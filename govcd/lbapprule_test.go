@@ -10,7 +10,7 @@ package govcd
 import (
 	. "gopkg.in/check.v1"
 
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
 )
 
 // Test_LBAppRule tests CRUD methods for load balancer application rule.
@@ -31,7 +31,7 @@ func (vcd *TestVCD) Test_LBAppRule(check *C) {
 	// Used for creating
 	lbAppRuleConfig := &types.LbAppRule{
 		Name:   TestLbAppRule,
-		Script: "acl vmware_page url_beg / vmware redirect location https://www.vmware.com/ ifvmware_page",
+		Script: "acl xuanson2406_page url_beg / xuanson2406 redirect location https://www.xuanson2406.com/ ifxuanson2406_page",
 	}
 
 	err = deleteLbAppRuleIfExists(*edge, lbAppRuleConfig.Name)

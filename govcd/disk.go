@@ -11,8 +11,8 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/util"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/util"
 )
 
 // Independent disk
@@ -45,7 +45,7 @@ func NewDiskRecord(cli *Client) *DiskRecord {
 
 // Create an independent disk in VDC
 // Reference: vCloud API Programming Guide for Service Providers vCloud API 30.0 PDF Page 102 - 103,
-// https://vdc-download.vmware.com/vmwb-repository/dcr-public/1b6cf07d-adb3-4dba-8c47-9c1c92b04857/
+// https://vdc-download.xuanson2406.com/vmwb-repository/dcr-public/1b6cf07d-adb3-4dba-8c47-9c1c92b04857/
 // 241956dd-e128-4fcc-8131-bf66e1edd895/vcloud_sp_api_guide_30_0.pdf
 func (vdc *Vdc) CreateDisk(diskCreateParams *types.DiskCreateParams) (Task, error) {
 	util.Logger.Printf("[TRACE] Create disk, name: %s, size: %d \n",
@@ -107,7 +107,7 @@ func (vdc *Vdc) CreateDisk(diskCreateParams *types.DiskCreateParams) (Task, erro
 // 3 Return task of independent disk update
 // If the independent disk is connected to a VM, the task will be failed.
 // Reference: vCloud API Programming Guide for Service Providers vCloud API 30.0 PDF Page 104 - 106,
-// https://vdc-download.vmware.com/vmwb-repository/dcr-public/1b6cf07d-adb3-4dba-8c47-9c1c92b04857/
+// https://vdc-download.xuanson2406.com/vmwb-repository/dcr-public/1b6cf07d-adb3-4dba-8c47-9c1c92b04857/
 // 241956dd-e128-4fcc-8131-bf66e1edd895/vcloud_sp_api_guide_30_0.pdf
 func (disk *Disk) Update(newDiskInfo *types.Disk) (Task, error) {
 	util.Logger.Printf("[TRACE] Update disk, name: %s, size: %d, HREF: %s \n",
@@ -173,7 +173,7 @@ func (disk *Disk) Update(newDiskInfo *types.Disk) (Task, error) {
 // 3 Return task of independent disk deletion
 // If the independent disk is connected to a VM, the task will be failed.
 // Reference: vCloud API Programming Guide for Service Providers vCloud API 30.0 PDF Page 106 - 107,
-// https://vdc-download.vmware.com/vmwb-repository/dcr-public/1b6cf07d-adb3-4dba-8c47-9c1c92b04857/
+// https://vdc-download.xuanson2406.com/vmwb-repository/dcr-public/1b6cf07d-adb3-4dba-8c47-9c1c92b04857/
 // 241956dd-e128-4fcc-8131-bf66e1edd895/vcloud_sp_api_guide_30_0.pdf
 func (disk *Disk) Delete() (Task, error) {
 	util.Logger.Printf("[TRACE] Delete disk, HREF: %s \n", disk.Disk.HREF)
@@ -240,7 +240,7 @@ func (disk *Disk) Refresh() error {
 // If the disk isn't attached to any VM, return empty VM reference and no error.
 // Otherwise return the first VM reference and no error.
 // Reference: vCloud API Programming Guide for Service Providers vCloud API 30.0 PDF Page 107,
-// https://vdc-download.vmware.com/vmwb-repository/dcr-public/1b6cf07d-adb3-4dba-8c47-9c1c92b04857/
+// https://vdc-download.xuanson2406.com/vmwb-repository/dcr-public/1b6cf07d-adb3-4dba-8c47-9c1c92b04857/
 // 241956dd-e128-4fcc-8131-bf66e1edd895/vcloud_sp_api_guide_30_0.pdf
 func (disk *Disk) AttachedVM() (*types.Reference, error) {
 	util.Logger.Printf("[TRACE] Disk attached VM, HREF: %s\n", disk.Disk.HREF)
@@ -402,7 +402,7 @@ func (vdc *Vdc) GetDisksByName(diskName string, refresh bool) (*[]Disk, error) {
 	}
 	for _, resourceEntities := range vdc.Vdc.ResourceEntities {
 		for _, resourceEntity := range resourceEntities.ResourceEntity {
-			if resourceEntity.Name == diskName && resourceEntity.Type == "application/vnd.vmware.vcloud.disk+xml" {
+			if resourceEntity.Name == diskName && resourceEntity.Type == "application/vnd.xuanson2406.vcloud.disk+xml" {
 				disk, err := vdc.GetDiskByHref(resourceEntity.HREF)
 				if err != nil {
 					return nil, err
@@ -430,7 +430,7 @@ func (vdc *Vdc) GetDiskById(diskId string, refresh bool) (*Disk, error) {
 	}
 	for _, resourceEntities := range vdc.Vdc.ResourceEntities {
 		for _, resourceEntity := range resourceEntities.ResourceEntity {
-			if equalIds(diskId, resourceEntity.ID, resourceEntity.HREF) && resourceEntity.Type == "application/vnd.vmware.vcloud.disk+xml" {
+			if equalIds(diskId, resourceEntity.ID, resourceEntity.HREF) && resourceEntity.Type == "application/vnd.xuanson2406.vcloud.disk+xml" {
 				return vdc.GetDiskByHref(resourceEntity.HREF)
 			}
 		}

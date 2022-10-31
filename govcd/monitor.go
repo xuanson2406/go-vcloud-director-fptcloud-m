@@ -11,8 +11,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/util"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/util"
 )
 
 // For each library {entity}, we have two functions: Show{Entity} and Log{Entity}

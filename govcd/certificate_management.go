@@ -6,8 +6,9 @@ package govcd
 
 import (
 	"fmt"
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
 	"net/url"
+
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
 )
 
 // Certificate is a structure defining a certificate in VCD

@@ -12,8 +12,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/util"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/util"
 )
 
 type Task struct {
@@ -32,8 +32,8 @@ func NewTask(cli *Client) *Task {
 // made of the error itself + the information from the task's Error component.
 // See:
 //
-//	https://code.vmware.com/apis/220/vcloud#/doc/doc/types/TaskType.html
-//	https://code.vmware.com/apis/220/vcloud#/doc/doc/types/ErrorType.html
+//	https://code.xuanson2406.com/apis/220/vcloud#/doc/doc/types/TaskType.html
+//	https://code.xuanson2406.com/apis/220/vcloud#/doc/doc/types/ErrorType.html
 func (task *Task) getErrorMessage(err error) string {
 	errorMessage := ""
 	if err != nil {

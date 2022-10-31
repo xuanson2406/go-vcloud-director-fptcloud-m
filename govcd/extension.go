@@ -5,8 +5,9 @@
 package govcd
 
 import (
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
 	"net/http"
+
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
 )
 
 // Deprecated: please use GetExternalNetwork function instead

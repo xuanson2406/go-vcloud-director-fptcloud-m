@@ -15,8 +15,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/util"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/util"
 )
 
 /*
@@ -33,7 +33,7 @@ endpoint of ADFS server. Using ADFS response it constructs a SIGN token which vC
 "/api/sessions". After first initial "login" it grabs the regular X-Vcloud-Authorization token and
 uses it for further requests.
 More information in vCD documentation:
-https://code.vmware.com/docs/10000/vcloud-api-programming-guide-for-service-providers/GUID-335CFC35-7AD8-40E5-91BE-53971937A2BB.html
+https://code.xuanson2406.com/docs/10000/vcloud-api-programming-guide-for-service-providers/GUID-335CFC35-7AD8-40E5-91BE-53971937A2BB.html
 
 There is a working code example in /samples/saml_auth_adfs directory how to setup client using SAML
 auth.
@@ -51,7 +51,7 @@ auth.
 //
 // The general concept is to get a SIGN token from ADFS IdP (Identity Provider) and exchange it with
 // regular vCD token for further operations. It is documented in
-// https://code.vmware.com/docs/10000/vcloud-api-programming-guide-for-service-providers/GUID-335CFC35-7AD8-40E5-91BE-53971937A2BB.html
+// https://code.xuanson2406.com/docs/10000/vcloud-api-programming-guide-for-service-providers/GUID-335CFC35-7AD8-40E5-91BE-53971937A2BB.html
 // This is achieved with the following steps:
 // 1 - Lookup vCD Entity ID to use for ADFS authentication or use custom value if overrideRptId
 // field is provided

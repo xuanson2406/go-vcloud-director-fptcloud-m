@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
 )
 
 type Results struct {
@@ -26,7 +26,7 @@ func NewResults(cli *Client) *Results {
 func (vcdClient *VCDClient) Query(params map[string]string) (Results, error) {
 
 	req := vcdClient.Client.NewRequest(params, http.MethodGet, vcdClient.QueryHREF, nil)
-	req.Header.Add("Accept", "vnd.vmware.vcloud.org+xml;version="+vcdClient.Client.APIVersion)
+	req.Header.Add("Accept", "vnd.xuanson2406.vcloud.org+xml;version="+vcdClient.Client.APIVersion)
 
 	return getResult(&vcdClient.Client, req)
 }
@@ -35,7 +35,7 @@ func (vdc *Vdc) Query(params map[string]string) (Results, error) {
 	queryUrl := vdc.client.VCDHREF
 	queryUrl.Path += "/query"
 	req := vdc.client.NewRequest(params, http.MethodGet, queryUrl, nil)
-	req.Header.Add("Accept", "vnd.vmware.vcloud.org+xml;version="+vdc.client.APIVersion)
+	req.Header.Add("Accept", "vnd.xuanson2406.vcloud.org+xml;version="+vdc.client.APIVersion)
 
 	return getResult(vdc.client, req)
 }
@@ -59,7 +59,7 @@ func (client *Client) QueryWithNotEncodedParamsWithApiVersionWithHeaders(params 
 	queryUrl.Path += "/query"
 
 	req := client.NewRequestWitNotEncodedParamsWithApiVersion(params, notEncodedParams, http.MethodGet, queryUrl, nil, apiVersion)
-	req.Header.Add("Accept", "vnd.vmware.vcloud.org+xml;version="+apiVersion)
+	req.Header.Add("Accept", "vnd.xuanson2406.vcloud.org+xml;version="+apiVersion)
 
 	for k, v := range headers {
 		req.Header.Add(k, v)

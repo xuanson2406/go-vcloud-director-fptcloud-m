@@ -15,8 +15,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/util"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/util"
 )
 
 // OrgVDCNetwork an org vdc network client
@@ -138,7 +138,7 @@ func (vdc *Vdc) CreateOrgVDCNetworkWait(networkConfig *types.OrgVDCNetwork) erro
 // the combination of properties given with the network configuration structure.
 func (vdc *Vdc) CreateOrgVDCNetwork(networkConfig *types.OrgVDCNetwork) (Task, error) {
 	for _, av := range vdc.Vdc.Link {
-		if av.Rel == "add" && av.Type == "application/vnd.vmware.vcloud.orgVdcNetwork+xml" {
+		if av.Rel == "add" && av.Type == "application/vnd.xuanson2406.vcloud.orgVdcNetwork+xml" {
 			createUrl, err := url.ParseRequestURI(av.HREF)
 
 			if err != nil {
@@ -242,7 +242,7 @@ func (vdc *Vdc) FindEdgeGatewayNameByNetwork(networkName string) (string, error)
 // getParentVdc retrieves the VDC to which the network is attached
 func (orgVdcNet *OrgVDCNetwork) getParentVdc() (*Vdc, error) {
 	for _, link := range orgVdcNet.OrgVDCNetwork.Link {
-		if link.Type == "application/vnd.vmware.vcloud.vdc+xml" {
+		if link.Type == "application/vnd.xuanson2406.vcloud.vdc+xml" {
 
 			vdc := NewVdc(orgVdcNet.client)
 

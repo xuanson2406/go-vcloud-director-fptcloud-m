@@ -19,8 +19,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/util"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/util"
 )
 
 // Client provides a client to VMware Cloud Director, values can be populated automatically using the Authenticate method.
@@ -823,7 +823,7 @@ func (client *Client) TestConnection(testConnection types.TestConnection) (*type
 // It returns whether it could reach the server and establish SSL connection or not.
 func (client *Client) TestConnectionWithDefaults(subscriptionURL string) (bool, error) {
 	if subscriptionURL == "" {
-		return false, fmt.Errorf("TestConnectionWithDefaults needs to be passed a host. i.e. my-host.vmware.com")
+		return false, fmt.Errorf("TestConnectionWithDefaults needs to be passed a host. i.e. my-host.xuanson2406.com")
 	}
 
 	url, err := url.Parse(subscriptionURL)

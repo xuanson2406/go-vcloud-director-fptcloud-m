@@ -6,10 +6,11 @@ package govcd
 
 import (
 	"fmt"
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/util"
 	"net/http"
 	"net/url"
+
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/util"
 )
 
 type VAppTemplate struct {

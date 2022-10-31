@@ -10,7 +10,7 @@ package govcd
 import (
 	"testing"
 
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
 )
 
 // Tests that equalIds returns the expected result whether the target reference
@@ -108,7 +108,7 @@ func Test_equalIds(t *testing.T) {
 			wanted: "urn:vcloud:catalogitem:97384890-180c-4563-b9b7-0dc50a2430b0",
 			reference: types.Reference{
 				Name: "url_with_id",
-				HREF: "https://vcd-a8bbe9be-13f2-4ce7-9187-d0d075c42531.cds.cloud.vmware.com/api/entity/97384890-180c-4563-b9b7-0dc50a2430b0",
+				HREF: "https://vcd-a8bbe9be-13f2-4ce7-9187-d0d075c42531.cds.cloud.xuanson2406.com/api/entity/97384890-180c-4563-b9b7-0dc50a2430b0",
 			},
 			expected: true,
 		},

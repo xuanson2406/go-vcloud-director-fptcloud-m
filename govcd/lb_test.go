@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
 	. "gopkg.in/check.v1"
 )
 

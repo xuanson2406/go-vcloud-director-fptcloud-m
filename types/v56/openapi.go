@@ -187,7 +187,7 @@ type VdcComputePolicy struct {
 }
 
 // VdcComputePolicyV2 contains VDC specific configuration for workloads (version 2.0.0)
-// https://developer.vmware.com/apis/vmware-cloud-director/latest/data-structures/VdcComputePolicy2/
+// https://developer.xuanson2406.com/apis/xuanson2406-cloud-director/latest/data-structures/VdcComputePolicy2/
 type VdcComputePolicyV2 struct {
 	VdcComputePolicy
 	PolicyType             string                   `json:"policyType"` // Required. Can be "VdcVmPolicy" or "VdcKubernetesPolicy"

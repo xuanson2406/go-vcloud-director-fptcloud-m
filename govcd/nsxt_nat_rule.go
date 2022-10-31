@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"net/url"
 
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
-	"github.com/vmware/go-vcloud-director-fptcloud/v2/util"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
+	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/util"
 )
 
 // NsxtNatRule describes a single NAT rule of 5 different Rule Types - DNAT`, `NO_DNAT`, `SNAT`, `NO_SNAT`, 'REFLEXIVE'
@@ -19,7 +19,7 @@ import (
 // perspective of your organization VDC.
 // DNAT and NO_DNAT - outside traffic going inside
 // SNAT and NO_SNAT - inside traffic going outside
-// More docs in https://docs.vmware.com/en/VMware-Cloud-Director/10.2/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-9E43E3DC-C028-47B3-B7CA-59F0ED40E0A6.html
+// More docs in https://docs.xuanson2406.com/en/VMware-Cloud-Director/10.2/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-9E43E3DC-C028-47B3-B7CA-59F0ED40E0A6.html
 //
 // Note. This structure and all its API calls will require at least API version 34.0, but will elevate it to 35.2 if
 // possible because API 35.2 introduces support for 2 new fields FirewallMatch and Priority.
