@@ -1,4 +1,4 @@
-module github.com/vmware/go-vcloud-director/v2
+module github.com/vmware/go-vcloud-director-fptcloud/v2
 
 go 1.18
 

@@ -11,7 +11,7 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/vmware/go-vcloud-director/v2/types/v56"
+	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
 	. "gopkg.in/check.v1"
 )
 
@@ -176,7 +176,7 @@ func (vcd *TestVCD) Test_UpdateVdcFlex(check *C) {
 	check.Assert(adminVdc.AdminVdc.IsEnabled, Equals, vdcConfiguration.IsEnabled)
 	check.Assert(adminVdc.AdminVdc.AllocationModel, Equals, vdcConfiguration.AllocationModel)
 
-	// test part to reproduce https://github.com/vmware/go-vcloud-director/issues/431
+	// test part to reproduce https://github.com/vmware/go-vcloud-director-fptcloud/issues/431
 	// this part manages to create task error which later on VDC update fails if type properties order is bad
 	providerVdcHref := getVdcProviderVdcHref(vcd, check)
 	pvdcStorageProfile, err := vcd.client.QueryProviderVdcStorageProfileByName(vcd.config.VCD.StorageProfile.SP2, providerVdcHref)

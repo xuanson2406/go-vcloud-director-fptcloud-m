@@ -16,8 +16,8 @@ import (
 	"time"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/vmware/go-vcloud-director/v2/types/v56"
-	"github.com/vmware/go-vcloud-director/v2/util"
+	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
+	"github.com/vmware/go-vcloud-director-fptcloud/v2/util"
 	. "gopkg.in/check.v1"
 )
 

@@ -12,7 +12,7 @@ set -e
 
 if [[ ! -f CHANGELOG.md ]]; then
   echo "ERROR: CHANGELOG.md not found in pwd."
-  echo "Please run this from the root of the go-vcloud-director repository"
+  echo "Please run this from the root of the go-vcloud-director-fptcloud repository"
   exit 1
 fi
 
@@ -24,7 +24,7 @@ else
   SED="sed -i.bak -r -e"
 fi
 
-GOVCD_URL="https:\/\/github.com\/vmware\/go-vcloud-director\/pull"
+GOVCD_URL="https:\/\/github.com\/vmware\/go-vcloud-director-fptcloud\/pull"
 
 $SED "s/GH-([0-9]+)/\[#\1\]\($GOVCD_URL\/\1\)/g" -e 's/\[\[#(.+)([0-9])\)]$/(\[#\1\2))/g' CHANGELOG.md
 if [ "$?" != "0" ] ; then exit 1 ; fi

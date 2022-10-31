@@ -5,7 +5,7 @@
 package govcd
 
 import (
-	"github.com/vmware/go-vcloud-director/v2/types/v56"
+	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
 	"net/http"
 )
 

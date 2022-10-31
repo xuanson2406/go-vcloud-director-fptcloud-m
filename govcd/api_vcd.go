@@ -15,8 +15,8 @@ import (
 
 	semver "github.com/hashicorp/go-version"
 
-	"github.com/vmware/go-vcloud-director/v2/types/v56"
-	"github.com/vmware/go-vcloud-director/v2/util"
+	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
+	"github.com/vmware/go-vcloud-director-fptcloud/v2/util"
 )
 
 // VCDClientOption defines signature for customizing VCDClient using
@@ -123,7 +123,7 @@ func NewVCDClient(vcdEndpoint url.URL, insecure bool, options ...VCDClientOption
 			APIVersion: minVcdApiVersion,
 			// UserAgent cannot embed exact version by default because this is source code and is supposed to be used by programs,
 			// but any client can customize or disable it at all using WithHttpUserAgent() configuration options function.
-			UserAgent: "go-vcloud-director",
+			UserAgent: "go-vcloud-director-fptcloud",
 			VCDHREF:   vcdEndpoint,
 			Http: http.Client{
 				Transport: &http.Transport{
@@ -297,7 +297,7 @@ func WithSamlAdfs(useSaml bool, customAdfsRptId string) VCDClientOption {
 }
 
 // WithHttpUserAgent allows to specify HTTP user-agent which can be useful for statistics tracking.
-// By default User-Agent is set to "go-vcloud-director". It can be unset by supplying empty value.
+// By default User-Agent is set to "go-vcloud-director-fptcloud". It can be unset by supplying empty value.
 func WithHttpUserAgent(userAgent string) VCDClientOption {
 	return func(vcdClient *VCDClient) error {
 		vcdClient.Client.UserAgent = userAgent

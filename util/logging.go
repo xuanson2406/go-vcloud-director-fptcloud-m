@@ -2,7 +2,7 @@
  * Copyright 2019 VMware, Inc.  All rights reserved.  Licensed under the Apache v2 License.
  */
 
-// Package util provides ancillary functionality to go-vcloud-director library
+// Package util provides ancillary functionality to go-vcloud-director-fptcloud library
 // logging.go regulates logging for the whole library.
 // See LOGGING.md for detailed usage
 package util
@@ -49,7 +49,7 @@ const (
 )
 
 var (
-	// All go-vcloud-director logging goes through this logger
+	// All go-vcloud-director-fptcloud logging goes through this logger
 	Logger *log.Logger
 
 	// It's true if we're using an user provided logger
@@ -57,7 +57,7 @@ var (
 
 	// Name of the log file
 	// activated by GOVCD_LOG_FILE
-	ApiLogFileName string = "go-vcloud-director.log"
+	ApiLogFileName string = "go-vcloud-director-fptcloud.log"
 
 	// Globally enabling logs
 	// activated by GOVCD_LOG

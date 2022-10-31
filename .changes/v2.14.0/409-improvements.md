@@ -1,1 +1,1 @@
-* Add session info to go-vcloud-director logs [GH-409]
+* Add session info to go-vcloud-director-fptcloud logs [GH-409]

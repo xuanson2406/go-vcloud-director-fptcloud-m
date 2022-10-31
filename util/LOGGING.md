@@ -16,7 +16,7 @@ util.EnableLogging = true
 util.SetLog()
 ```
 
-When enabled, the default output for logging is a file named `go-vcloud-director.log`.
+When enabled, the default output for logging is a file named `go-vcloud-director-fptcloud.log`.
 The file name can be changed using
 
 ```go

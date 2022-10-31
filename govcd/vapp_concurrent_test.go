@@ -14,7 +14,7 @@ import (
 )
 
 // Test_VAPPRefreshConcurrent is meant to prove and show that structures across
-// go-vcloud-director are not thread-safe. Go tests must be run with -race flag
+// go-vcloud-director-fptcloud are not thread-safe. Go tests must be run with -race flag
 // to capture race condition. It is also guarded by `concurrent` build tag and
 // is not run by default.
 //

@@ -1,5 +1,5 @@
-# Testing in go-vcloud-director
-To run tests in go-vcloud-director, users must use a yaml file specifying information about the users vcd. Users can set the `GOVCD_CONFIG` environmental variable with the path.
+# Testing in go-vcloud-director-fptcloud
+To run tests in go-vcloud-director-fptcloud, users must use a yaml file specifying information about the users vcd. Users can set the `GOVCD_CONFIG` environmental variable with the path.
 
 ```
 export GOVCD_CONFIG=your/path/to/test-configuration.yaml
@@ -91,7 +91,7 @@ $ go test -v .
         go test -tags catalog -check.vv -timeout=45m .
         go test -tags "query extnetwork" -check.vv -timeout=45m .
 FAIL
-FAIL	github.com/vmware/go-vcloud-director/v2/govcd	0.011s
+FAIL	github.com/vmware/go-vcloud-director-fptcloud/v2/govcd	0.011s
 ```
 
 To run tests with `concurency` build tag (omitted by default) and Go race detector:
@@ -99,11 +99,11 @@ To run tests with `concurency` build tag (omitted by default) and Go race detect
 ```bash
 make testconcurrent
 ```
-__Note__. At the moment they are failing because go-vcloud-director is not thread safe.
+__Note__. At the moment they are failing because go-vcloud-director-fptcloud is not thread safe.
 
 ## How to write a test
 
-go-vcloud-director tests are written using [check.v1](https://labix.org/gocheck), an auxiliary library for tests that provides several methods to help developers write comprehensive tests.
+go-vcloud-director-fptcloud tests are written using [check.v1](https://labix.org/gocheck), an auxiliary library for tests that provides several methods to help developers write comprehensive tests.
 
 
 ### Imports

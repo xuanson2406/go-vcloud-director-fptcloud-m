@@ -10,7 +10,7 @@ package govcd
 import (
 	"testing"
 
-	"github.com/vmware/go-vcloud-director/v2/types/v56"
+	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
 )
 
 // Tests that equalIds returns the expected result whether the target reference

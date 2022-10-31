@@ -151,7 +151,7 @@ logging:
     enabled: true
     #
     # changes the log name
-    logFileName: "go-vcloud-director.log"
+    logFileName: "go-vcloud-director-fptcloud.log"
     #
     # Defines whether we log the requests in HTTP operations
     logHttpRequests: true
@@ -189,7 +189,7 @@ ova:
   ovfPath: ../test-resources/test_vapp_template_ovf/descriptor.ovf
   #
   # The OVF URL for uploading catalog item for tests.
-  ovfUrl: https://raw.githubusercontent.com/vmware/go-vcloud-director/main/test-resources/test_vapp_template_ovf/descriptor.ovf
+  ovfUrl: https://raw.githubusercontent.com/vmware/go-vcloud-director-fptcloud/main/test-resources/test_vapp_template_ovf/descriptor.ovf
 media:
   # The iso for uploading media item for tests.
   # Default paths are simple iso provided by project

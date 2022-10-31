@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/vmware/go-vcloud-director/v2/types/v56"
+	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
 )
 
 // AdminCatalog is a admin view of a VMware Cloud Director Catalog

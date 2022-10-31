@@ -13,8 +13,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/vmware/go-vcloud-director/v2/types/v56"
-	"github.com/vmware/go-vcloud-director/v2/util"
+	"github.com/vmware/go-vcloud-director-fptcloud/v2/types/v56"
+	"github.com/vmware/go-vcloud-director-fptcloud/v2/util"
 )
 
 type Vdc struct {
@@ -334,7 +334,7 @@ func (vdc *Vdc) FindEdgeGateway(edgegateway string) (EdgeGateway, error) {
 			// At this point in time the solution is to retry a few times as it does not fail to
 			// retrieve when retried.
 			//
-			// GitHUB issue - https://github.com/vmware/go-vcloud-director/issues/218
+			// GitHUB issue - https://github.com/vmware/go-vcloud-director-fptcloud/issues/218
 			if err != nil {
 				util.Logger.Printf("[DEBUG] vCD 9.7 is known to sometimes respond with error on edge gateway (%s) "+
 					"retrieval. As a workaround this is done a few times before failing. Retrying: ", edgegateway)
@@ -373,7 +373,7 @@ func (vdc *Vdc) GetEdgeGatewayByHref(href string) (*EdgeGateway, error) {
 	// At this point in time the solution is to retry a few times as it does not fail to
 	// retrieve when retried.
 	//
-	// GitHUB issue - https://github.com/vmware/go-vcloud-director/issues/218
+	// GitHUB issue - https://github.com/vmware/go-vcloud-director-fptcloud/issues/218
 	if err != nil {
 		util.Logger.Printf("[DEBUG] vCD 9.7 is known to sometimes respond with error on edge gateway " +
 			"retrieval. As a workaround this is done a few times before failing. Retrying:")
