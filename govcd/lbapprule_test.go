@@ -31,7 +31,7 @@ func (vcd *TestVCD) Test_LBAppRule(check *C) {
 	// Used for creating
 	lbAppRuleConfig := &types.LbAppRule{
 		Name:   TestLbAppRule,
-		Script: "acl xuanson2406_page url_beg / xuanson2406 redirect location https://www.xuanson2406.com/ ifxuanson2406_page",
+		Script: "acl vmware_page url_beg / vmware redirect location https://www.vmware.com/ ifvmware_page",
 	}
 
 	err = deleteLbAppRuleIfExists(*edge, lbAppRuleConfig.Name)

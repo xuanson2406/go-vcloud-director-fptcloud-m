@@ -13,7 +13,7 @@ in the above project.
 ## Create new entities
 
 A new entity must have its type defined in `types/56/types.go`. If the type is not already there, it should be 
-added using the [vCD API](https://code.xuanson2406.com/apis/72/vcloud-director), and possibly reusing components already defined
+added using the [vCD API](https://code.vmware.com/apis/72/vcloud-director), and possibly reusing components already defined
 in `types.go`.
 
 The new entity should have a structure in `entity.go` as
@@ -284,7 +284,7 @@ vApp to a catalog.
   "metadata" = {
     "vapp.origin.id" = "deadbeef-2913-4ed7-b943-79a91620fd52" // vApp ID
     "vapp.origin.name" = "my_vapp_name"
-    "vapp.origin.type" = "com.xuanson2406.vcloud.entity.vapp"
+    "vapp.origin.type" = "com.vmware.vcloud.entity.vapp"
   }
 ```
 
@@ -373,13 +373,13 @@ or even when there is no such user yet.
 The context change works by adding a header to the API call, containing these fields:
 
 ```
-X-xuanson2406-Vcloud-Tenant-Context: [604cf889-b01e-408b-95ae-67b02a0ecf33]
-X-xuanson2406-Vcloud-Auth-Context:   [org-name]
+X-vmware-Vcloud-Tenant-Context: [604cf889-b01e-408b-95ae-67b02a0ecf33]
+X-vmware-Vcloud-Auth-Context:   [org-name]
 ```
 
-The field `X-xuanson2406-Vcloud-Tenant-Context` contains the bare ID of the organization (it's just the UUID, without the
+The field `X-vmware-Vcloud-Tenant-Context` contains the bare ID of the organization (it's just the UUID, without the
 prefix `urn:vcloud:org:`).
-The field `X-xuanson2406-Vcloud-Auth-Context` contains the organization name.
+The field `X-vmware-Vcloud-Auth-Context` contains the organization name.
 
 ### tenant context: data availability
 

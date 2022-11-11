@@ -823,7 +823,7 @@ func (client *Client) TestConnection(testConnection types.TestConnection) (*type
 // It returns whether it could reach the server and establish SSL connection or not.
 func (client *Client) TestConnectionWithDefaults(subscriptionURL string) (bool, error) {
 	if subscriptionURL == "" {
-		return false, fmt.Errorf("TestConnectionWithDefaults needs to be passed a host. i.e. my-host.xuanson2406.com")
+		return false, fmt.Errorf("TestConnectionWithDefaults needs to be passed a host. i.e. my-host.vmware.com")
 	}
 
 	url, err := url.Parse(subscriptionURL)

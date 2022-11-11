@@ -28,122 +28,122 @@ const (
 
 const (
 	// MimeOrgList mime for org list
-	MimeOrgList = "application/vnd.xuanson2406.vcloud.orgList+xml"
+	MimeOrgList = "application/vnd.vmware.vcloud.orgList+xml"
 	// MimeOrg mime for org
-	MimeOrg = "application/vnd.xuanson2406.vcloud.org+xml"
+	MimeOrg = "application/vnd.vmware.vcloud.org+xml"
 	// MimeAdminOrg mime for admin org
-	MimeAdminOrg = "application/vnd.xuanson2406.admin.organization+xml"
+	MimeAdminOrg = "application/vnd.vmware.admin.organization+xml"
 	// MimeCatalog mime for catalog
-	MimeCatalog = "application/vnd.xuanson2406.vcloud.catalog+xml"
+	MimeCatalog = "application/vnd.vmware.vcloud.catalog+xml"
 	// MimeCatalogItem mime for catalog item
-	MimeCatalogItem = "application/vnd.xuanson2406.vcloud.catalogItem+xml"
+	MimeCatalogItem = "application/vnd.vmware.vcloud.catalogItem+xml"
 	// MimeVDC mime for a VDC
-	MimeVDC = "application/vnd.xuanson2406.vcloud.vdc+xml"
+	MimeVDC = "application/vnd.vmware.vcloud.vdc+xml"
 	// MimeVDC mime for a admin VDC
-	MimeAdminVDC = "application/vnd.xuanson2406.admin.vdc+xml"
+	MimeAdminVDC = "application/vnd.vmware.admin.vdc+xml"
 	// MimeEdgeGateway mime for an Edge Gateway
-	MimeEdgeGateway = "application/vnd.xuanson2406.admin.edgeGateway+xml"
+	MimeEdgeGateway = "application/vnd.vmware.admin.edgeGateway+xml"
 	// MimeVAppTemplate mime for a vapp template
-	MimeVAppTemplate = "application/vnd.xuanson2406.vcloud.vAppTemplate+xml"
+	MimeVAppTemplate = "application/vnd.vmware.vcloud.vAppTemplate+xml"
 	// MimeVApp mime for a vApp
-	MimeVApp = "application/vnd.xuanson2406.vcloud.vApp+xml"
+	MimeVApp = "application/vnd.vmware.vcloud.vApp+xml"
 	// MimeQueryRecords mime for the query records
-	MimeQueryRecords = "application/vnd.xuanson2406.vcloud.query.records+xml"
+	MimeQueryRecords = "application/vnd.vmware.vcloud.query.records+xml"
 	// MimeAPIExtensibility mime for api extensibility
-	MimeAPIExtensibility = "application/vnd.xuanson2406.vcloud.apiextensibility+xml"
+	MimeAPIExtensibility = "application/vnd.vmware.vcloud.apiextensibility+xml"
 	// MimeEntity mime for vcloud entity
-	MimeEntity = "application/vnd.xuanson2406.vcloud.entity+xml"
+	MimeEntity = "application/vnd.vmware.vcloud.entity+xml"
 	// MimeQueryList mime for query list
-	MimeQueryList = "application/vnd.xuanson2406.vcloud.query.queryList+xml"
+	MimeQueryList = "application/vnd.vmware.vcloud.query.queryList+xml"
 	// MimeSession mime for a session
-	MimeSession = "application/vnd.xuanson2406.vcloud.session+xml"
+	MimeSession = "application/vnd.vmware.vcloud.session+xml"
 	// MimeTask mime for task
-	MimeTask = "application/vnd.xuanson2406.vcloud.task+xml"
+	MimeTask = "application/vnd.vmware.vcloud.task+xml"
 	// MimeError mime for error
-	MimeError = "application/vnd.xuanson2406.vcloud.error+xml"
+	MimeError = "application/vnd.vmware.vcloud.error+xml"
 	// MimeNetwork mime for a network
-	MimeNetwork = "application/vnd.xuanson2406.vcloud.network+xml"
+	MimeNetwork = "application/vnd.vmware.vcloud.network+xml"
 	// MimeOrgVdcNetwork mime for an Org VDC network
-	MimeOrgVdcNetwork = "application/vnd.xuanson2406.vcloud.orgVdcNetwork+xml"
+	MimeOrgVdcNetwork = "application/vnd.vmware.vcloud.orgVdcNetwork+xml"
 	//MimeDiskCreateParams mime for create independent disk
-	MimeDiskCreateParams = "application/vnd.xuanson2406.vcloud.diskCreateParams+xml"
+	MimeDiskCreateParams = "application/vnd.vmware.vcloud.diskCreateParams+xml"
 	// Mime for VMs
-	MimeVMs = "application/vnd.xuanson2406.vcloud.vms+xml"
+	MimeVMs = "application/vnd.vmware.vcloud.vms+xml"
 	// Mime for attach or detach independent disk
-	MimeDiskAttachOrDetachParams = "application/vnd.xuanson2406.vcloud.diskAttachOrDetachParams+xml"
+	MimeDiskAttachOrDetachParams = "application/vnd.vmware.vcloud.diskAttachOrDetachParams+xml"
 	// Mime for Disk
-	MimeDisk = "application/vnd.xuanson2406.vcloud.disk+xml"
+	MimeDisk = "application/vnd.vmware.vcloud.disk+xml"
 	// Mime for insert or eject media
-	MimeMediaInsertOrEjectParams = "application/vnd.xuanson2406.vcloud.mediaInsertOrEjectParams+xml"
+	MimeMediaInsertOrEjectParams = "application/vnd.vmware.vcloud.mediaInsertOrEjectParams+xml"
 	// Mime for catalog
-	MimeAdminCatalog = "application/vnd.xuanson2406.admin.catalog+xml"
+	MimeAdminCatalog = "application/vnd.vmware.admin.catalog+xml"
 	// Mime for virtual hardware section
-	MimeVirtualHardwareSection = "application/vnd.xuanson2406.vcloud.virtualHardwareSection+xml"
+	MimeVirtualHardwareSection = "application/vnd.vmware.vcloud.virtualHardwareSection+xml"
 	// Mime for networkConnectionSection
-	MimeNetworkConnectionSection = "application/vnd.xuanson2406.vcloud.networkConnectionSection+xml"
+	MimeNetworkConnectionSection = "application/vnd.vmware.vcloud.networkConnectionSection+xml"
 	// Mime for Item
-	MimeRasdItem = "application/vnd.xuanson2406.vcloud.rasdItem+xml"
+	MimeRasdItem = "application/vnd.vmware.vcloud.rasdItem+xml"
 	// Mime for guest customization section
-	MimeGuestCustomizationSection = "application/vnd.xuanson2406.vcloud.guestCustomizationSection+xml"
+	MimeGuestCustomizationSection = "application/vnd.vmware.vcloud.guestCustomizationSection+xml"
 	// Mime for guest customization status
-	MimeGuestCustomizationStatus = "application/vnd.xuanson2406.vcloud.guestcustomizationstatussection"
+	MimeGuestCustomizationStatus = "application/vnd.vmware.vcloud.guestcustomizationstatussection"
 	// Mime for network config section
-	MimeNetworkConfigSection = "application/vnd.xuanson2406.vcloud.networkconfigsection+xml"
+	MimeNetworkConfigSection = "application/vnd.vmware.vcloud.networkconfigsection+xml"
 	// Mime for recompose vApp params
-	MimeRecomposeVappParams = "application/vnd.xuanson2406.vcloud.recomposeVAppParams+xml"
+	MimeRecomposeVappParams = "application/vnd.vmware.vcloud.recomposeVAppParams+xml"
 	// Mime for compose vApp params
-	MimeComposeVappParams = "application/vnd.xuanson2406.vcloud.composeVAppParams+xml"
+	MimeComposeVappParams = "application/vnd.vmware.vcloud.composeVAppParams+xml"
 	// Mime for undeploy vApp params
-	MimeUndeployVappParams = "application/vnd.xuanson2406.vcloud.undeployVAppParams+xml"
+	MimeUndeployVappParams = "application/vnd.vmware.vcloud.undeployVAppParams+xml"
 	// Mime for deploy vApp params
-	MimeDeployVappParams = "application/vnd.xuanson2406.vcloud.deployVAppParams+xml"
+	MimeDeployVappParams = "application/vnd.vmware.vcloud.deployVAppParams+xml"
 	// Mime for VM
-	MimeVM = "application/vnd.xuanson2406.vcloud.vm+xml"
+	MimeVM = "application/vnd.vmware.vcloud.vm+xml"
 	// Mime for instantiate vApp template params
-	MimeInstantiateVappTemplateParams = "application/vnd.xuanson2406.vcloud.instantiateVAppTemplateParams+xml"
+	MimeInstantiateVappTemplateParams = "application/vnd.vmware.vcloud.instantiateVAppTemplateParams+xml"
 	// Mime for product section
-	MimeProductSection = "application/vnd.xuanson2406.vcloud.productSections+xml"
+	MimeProductSection = "application/vnd.vmware.vcloud.productSections+xml"
 	// Mime for metadata
-	MimeMetaData = "application/vnd.xuanson2406.vcloud.metadata+xml"
+	MimeMetaData = "application/vnd.vmware.vcloud.metadata+xml"
 	// Mime for metadata value
-	MimeMetaDataValue = "application/vnd.xuanson2406.vcloud.metadata.value+xml"
+	MimeMetaDataValue = "application/vnd.vmware.vcloud.metadata.value+xml"
 	// Mime for a admin network
-	MimeExtensionNetwork = "application/vnd.xuanson2406.admin.extension.network+xml"
+	MimeExtensionNetwork = "application/vnd.vmware.admin.extension.network+xml"
 	// Mime for an external network
-	MimeExternalNetwork = "application/vnd.xuanson2406.admin.vmwexternalnet+xml"
+	MimeExternalNetwork = "application/vnd.vmware.admin.vmwexternalnet+xml"
 	// Mime of an Org User
-	MimeAdminUser = "application/vnd.xuanson2406.admin.user+xml"
+	MimeAdminUser = "application/vnd.vmware.admin.user+xml"
 	// MimeAdminGroup specifies groups
-	MimeAdminGroup = "application/vnd.xuanson2406.admin.group+xml"
+	MimeAdminGroup = "application/vnd.vmware.admin.group+xml"
 	// MimeOrgLdapSettings
-	MimeOrgLdapSettings = "application/vnd.xuanson2406.admin.organizationldapsettings+xml"
+	MimeOrgLdapSettings = "application/vnd.vmware.admin.organizationldapsettings+xml"
 	// Mime of vApp network
-	MimeVappNetwork = "application/vnd.xuanson2406.vcloud.vAppNetwork+xml"
+	MimeVappNetwork = "application/vnd.vmware.vcloud.vAppNetwork+xml"
 	// Mime of access control
-	MimeControlAccess = "application/vnd.xuanson2406.vcloud.controlAccess+xml"
+	MimeControlAccess = "application/vnd.vmware.vcloud.controlAccess+xml"
 	// Mime of VM capabilities
-	MimeVmCapabilities = "application/vnd.xuanson2406.vcloud.vmCapabilitiesSection+xml"
+	MimeVmCapabilities = "application/vnd.vmware.vcloud.vmCapabilitiesSection+xml"
 	// Mime of Vdc Compute Policy References
-	MimeVdcComputePolicyReferences = "application/vnd.xuanson2406.vcloud.vdcComputePolicyReferences+xml"
+	MimeVdcComputePolicyReferences = "application/vnd.vmware.vcloud.vdcComputePolicyReferences+xml"
 	// Mime for Storage profile
-	MimeStorageProfile = "application/vnd.xuanson2406.admin.vdcStorageProfile+xml "
+	MimeStorageProfile = "application/vnd.vmware.admin.vdcStorageProfile+xml "
 	// Mime for create VM Params
-	MimeCreateVmParams = "application/vnd.xuanson2406.vcloud.CreateVmParams+xml"
+	MimeCreateVmParams = "application/vnd.vmware.vcloud.CreateVmParams+xml"
 	// Mime for instantiate VM Params from template
-	MimeInstantiateVmTemplateParams = "application/vnd.xuanson2406.vcloud.instantiateVmTemplateParams+xml"
+	MimeInstantiateVmTemplateParams = "application/vnd.vmware.vcloud.instantiateVmTemplateParams+xml"
 	// Mime for adding or removing VDC storage profiles
-	MimeUpdateVdcStorageProfiles = "application/vnd.xuanson2406.admin.updateVdcStorageProfiles+xml"
+	MimeUpdateVdcStorageProfiles = "application/vnd.vmware.admin.updateVdcStorageProfiles+xml"
 	// Mime to modify lease settings
-	MimeLeaseSettingSection = "application/vnd.xuanson2406.vcloud.leaseSettingsSection+xml"
+	MimeLeaseSettingSection = "application/vnd.vmware.vcloud.leaseSettingsSection+xml"
 	// Mime to publish external catalog
-	PublishExternalCatalog = "application/vnd.xuanson2406.admin.publishExternalCatalogParams+xml"
+	PublishExternalCatalog = "application/vnd.vmware.admin.publishExternalCatalogParams+xml"
 )
 
 const (
-	VMsCDResourceSubType = "xuanson2406.cdrom.iso"
+	VMsCDResourceSubType = "vmware.cdrom.iso"
 )
 
-// https://blogs.xuanson2406.com/vapp/2009/11/virtual-hardware-in-ovf-part-1.html
+// https://blogs.vmware.com/vapp/2009/11/virtual-hardware-in-ovf-part-1.html
 
 const (
 	ResourceTypeOther     int = 0
@@ -179,13 +179,13 @@ const (
 )
 
 const (
-	XMLNamespaceVCloud    = "http://www.xuanson2406.com/vcloud/v1.5"
+	XMLNamespaceVCloud    = "http://www.vmware.com/vcloud/v1.5"
 	XMLNamespaceOVF       = "http://schemas.dmtf.org/ovf/envelope/1"
-	XMLNamespaceVMW       = "http://www.xuanson2406.com/schema/ovf"
+	XMLNamespaceVMW       = "http://www.vmware.com/schema/ovf"
 	XMLNamespaceXSI       = "http://www.w3.org/2001/XMLSchema-instance"
 	XMLNamespaceRASD      = "http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData"
 	XMLNamespaceVSSD      = "http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_VirtualSystemSettingData"
-	XMLNamespaceExtension = "http://www.xuanson2406.com/vcloud/extension/v1.5"
+	XMLNamespaceExtension = "http://www.vmware.com/vcloud/extension/v1.5"
 )
 
 // NSX-V Edge gateway API endpoints
@@ -489,7 +489,7 @@ const (
 
 const (
 	// VcloudUndefinedKey is the bundles key automatically added to new role related objects
-	VcloudUndefinedKey = "com.xuanson2406.vcloud.undefined.key"
+	VcloudUndefinedKey = "com.vmware.vcloud.undefined.key"
 )
 
 const (

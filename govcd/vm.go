@@ -215,7 +215,7 @@ func (vm *VM) PowerOff() (Task, error) {
 // ChangeCPUCount sets number of available virtual logical processors
 // (i.e. CPUs x cores per socket)
 // Cpu cores count is inherited from template.
-// https://communities.xuanson2406.com/thread/576209
+// https://communities.vmware.com/thread/576209
 // Deprecated: use vm.ChangeCPU instead
 func (vm *VM) ChangeCPUCount(virtualCpuCount int) (Task, error) {
 	return vm.ChangeCPUCountWithCore(virtualCpuCount, nil)
@@ -224,7 +224,7 @@ func (vm *VM) ChangeCPUCount(virtualCpuCount int) (Task, error) {
 // ChangeCPUCountWithCore sets number of available virtual logical processors
 // (i.e. CPUs x cores per socket) and cores per socket.
 // Socket count is a result of: virtual logical processors/cores per socket
-// https://communities.xuanson2406.com/thread/576209
+// https://communities.vmware.com/thread/576209
 // Deprecated: use vm.ChangeCPU instead
 func (vm *VM) ChangeCPUCountWithCore(virtualCpuCount int, coresPerSocket *int) (Task, error) {
 
@@ -566,7 +566,7 @@ func (vm *VM) Shutdown() (Task, error) {
 // Attach or detach an independent disk
 // Use the disk/action/attach or disk/action/detach links in a VM to attach or detach an independent disk.
 // Reference: vCloud API Programming Guide for Service Providers vCloud API 30.0 PDF Page 164 - 165,
-// https://vdc-download.xuanson2406.com/vmwb-repository/dcr-public/1b6cf07d-adb3-4dba-8c47-9c1c92b04857/
+// https://vdc-download.vmware.com/vmwb-repository/dcr-public/1b6cf07d-adb3-4dba-8c47-9c1c92b04857/
 // 241956dd-e128-4fcc-8131-bf66e1edd895/vcloud_sp_api_guide_30_0.pdf
 func (vm *VM) attachOrDetachDisk(diskParams *types.DiskAttachOrDetachParams, rel string) (Task, error) {
 	util.Logger.Printf("[TRACE] Attach or detach disk, href: %s, rel: %s \n", diskParams.Disk.HREF, rel)
@@ -600,7 +600,7 @@ func (vm *VM) attachOrDetachDisk(diskParams *types.DiskAttachOrDetachParams, rel
 // Please verify the independent disk is not connected to any VM before calling this function.
 // If the independent disk is connected to a VM, the task will be failed.
 // Reference: vCloud API Programming Guide for Service Providers vCloud API 30.0 PDF Page 164 - 165,
-// https://vdc-download.xuanson2406.com/vmwb-repository/dcr-public/1b6cf07d-adb3-4dba-8c47-9c1c92b04857/
+// https://vdc-download.vmware.com/vmwb-repository/dcr-public/1b6cf07d-adb3-4dba-8c47-9c1c92b04857/
 // 241956dd-e128-4fcc-8131-bf66e1edd895/vcloud_sp_api_guide_30_0.pdf
 func (vm *VM) AttachDisk(diskParams *types.DiskAttachOrDetachParams) (Task, error) {
 	if diskParams == nil || diskParams.Disk == nil || diskParams.Disk.HREF == "" {
@@ -616,7 +616,7 @@ func (vm *VM) AttachDisk(diskParams *types.DiskAttachOrDetachParams) (Task, erro
 // Please verify the independent disk is connected the VM before calling this function.
 // If the independent disk is not connected to the VM, the task will be failed.
 // Reference: vCloud API Programming Guide for Service Providers vCloud API 30.0 PDF Page 164 - 165,
-// https://vdc-download.xuanson2406.com/vmwb-repository/dcr-public/1b6cf07d-adb3-4dba-8c47-9c1c92b04857/
+// https://vdc-download.vmware.com/vmwb-repository/dcr-public/1b6cf07d-adb3-4dba-8c47-9c1c92b04857/
 // 241956dd-e128-4fcc-8131-bf66e1edd895/vcloud_sp_api_guide_30_0.pdf
 func (vm *VM) DetachDisk(diskParams *types.DiskAttachOrDetachParams) (Task, error) {
 
@@ -756,8 +756,8 @@ func validateMediaParams(mediaParams *types.MediaInsertOrEjectParams) error {
 // Insert or eject a media for VM
 // Use the vm/action/insert or vm/action/eject links in a VM to insert or eject media.
 // Reference:
-// https://code.xuanson2406.com/apis/287/vcloud#/doc/doc/operations/POST-InsertCdRom.html
-// https://code.xuanson2406.com/apis/287/vcloud#/doc/doc/operations/POST-EjectCdRom.html
+// https://code.vmware.com/apis/287/vcloud#/doc/doc/operations/POST-InsertCdRom.html
+// https://code.vmware.com/apis/287/vcloud#/doc/doc/operations/POST-EjectCdRom.html
 func (vm *VM) insertOrEjectMedia(mediaParams *types.MediaInsertOrEjectParams, linkRel string) (Task, error) {
 	util.Logger.Printf("[TRACE] Insert or eject media, href: %s, name: %s, , linkRel: %s \n", mediaParams.Media.HREF, mediaParams.Media.Name, linkRel)
 
@@ -783,7 +783,7 @@ func (vm *VM) insertOrEjectMedia(mediaParams *types.MediaInsertOrEjectParams, li
 
 // GetQuestion uses the get existing VM question for operation which need additional response
 // Reference:
-// https://code.xuanson2406.com/apis/287/vcloud#/doc/doc/operations/GET-VmPendingQuestion.html
+// https://code.vmware.com/apis/287/vcloud#/doc/doc/operations/GET-VmPendingQuestion.html
 func (vm *VM) GetQuestion() (types.VmPendingQuestion, error) {
 
 	apiEndpoint := urlParseRequestURI(vm.VM.HREF)
@@ -819,7 +819,7 @@ func (vm *VM) GetQuestion() (types.VmPendingQuestion, error) {
 
 // AnswerQuestion uses the provided answer to existing VM question for operation which need additional response
 // Reference:
-// https://code.xuanson2406.com/apis/287/vcloud#/doc/doc/operations/POST-AnswerVmPendingQuestion.html
+// https://code.vmware.com/apis/287/vcloud#/doc/doc/operations/POST-AnswerVmPendingQuestion.html
 func (vm *VM) AnswerQuestion(questionId string, choiceId int) error {
 
 	//validate input
@@ -1911,7 +1911,7 @@ func (vm *VM) ChangeMemory(sizeInMb int64) error {
 // ChangeCPUCount sets number of available virtual logical processors
 // (i.e. CPUs x cores per socket)
 // Cpu cores count is inherited from template.
-// https://communities.xuanson2406.com/thread/576209
+// https://communities.vmware.com/thread/576209
 // Deprecated: use ChangeCPUAndCoreCount
 func (vm *VM) ChangeCPU(cpus, cpuCores int) error {
 	vmSpecSection := vm.VM.VmSpecSection

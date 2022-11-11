@@ -7,7 +7,7 @@ import "encoding/xml"
 
 // Vm represents a virtual machine
 // Type: VmType
-// Namespace: http://www.xuanson2406.com/vcloud/v1.5
+// Namespace: http://www.vmware.com/vcloud/v1.5
 // Description: Represents a virtual machine.
 // Since: 0.9
 // This structure used to be called `VM`, and needed an XMLName to adjust the XML entity name upon marshalling.

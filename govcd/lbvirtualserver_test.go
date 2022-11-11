@@ -203,7 +203,7 @@ func buildTestLBVirtualServerPrereqs(node1Ip, node2Ip, componentsName string, ch
 
 	lbAppRuleConfig := &types.LbAppRule{
 		Name:   componentsName,
-		Script: "acl xuanson2406_page url_beg / xuanson2406 redirect location https://www.xuanson2406.com/ ifxuanson2406_page",
+		Script: "acl vmware_page url_beg / vmware redirect location https://www.vmware.com/ ifvmware_page",
 	}
 
 	// Create prerequisites - application rule

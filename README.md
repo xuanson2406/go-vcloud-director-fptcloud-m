@@ -1,10 +1,10 @@
-# go-vcloud-director-fptcloud [![GoDoc](https://godoc.org/github.com/xuanson2406/go-vcloud-director-fptcloud?status.svg)](http://godoc.org/github.com/xuanson2406/go-vcloud-director-fptcloud) [![Chat](https://img.shields.io/badge/chat-on%20slack-brightgreen.svg)](https://xuanson2406code.slack.com/messages/CBBBXVB16)
+# go-vcloud-director-fptcloud [![GoDoc](https://godoc.org/github.com/xuanson2406/go-vcloud-director-fptcloud?status.svg)](http://godoc.org/github.com/xuanson2406/go-vcloud-director-fptcloud) [![Chat](https://img.shields.io/badge/chat-on%20slack-brightgreen.svg)](https://vmware.slack.com/messages/CBBBXVB16)
 
 This repo contains the `go-vcloud-director-fptcloud` package which implements
-an SDK for xuanson2406 Cloud Director. The project serves the needs of Golang
-developers who need to integrate with xuanson2406 Cloud Director. It is also the
+an SDK for vmware Cloud Director. The project serves the needs of Golang
+developers who need to integrate with vmware Cloud Director. It is also the
 basis of the [vCD Terraform
-Provider](https://github.com/xuanson2406/terraform-provider-vcd).
+Provider](https://github.com/vmware/terraform-provider-vcd).
 
 ## Contributions ##
 
@@ -145,4 +145,4 @@ err = vcdCli.Authenticate(username, password, org)
 
 More information about inner workings of SAML auth flow in this codebase can be found in
 `saml_auth.go:authorizeSamlAdfs(...)`. Additionaly this flow is documented in [vCD
-documentation](https://code.xuanson2406.com/docs/10000/vcloud-api-programming-guide-for-service-providers/GUID-335CFC35-7AD8-40E5-91BE-53971937A2BB.html).
+documentation](https://code.vmware.com/docs/10000/vcloud-api-programming-guide-for-service-providers/GUID-335CFC35-7AD8-40E5-91BE-53971937A2BB.html).

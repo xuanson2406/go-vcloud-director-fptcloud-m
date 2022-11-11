@@ -1723,7 +1723,7 @@ func (vcd *TestVCD) findFirstVapp() VApp {
 		// As no vApp is defined in config, we search for one randomly
 		for _, res := range vdc.Vdc.ResourceEntities {
 			for _, item := range res.ResourceEntity {
-				if item.Type == "application/vnd.xuanson2406.vcloud.vApp+xml" {
+				if item.Type == "application/vnd.vmware.vcloud.vApp+xml" {
 					wantedVapp = item.Name
 					break
 				}

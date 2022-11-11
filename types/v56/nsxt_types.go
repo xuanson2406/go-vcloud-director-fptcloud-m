@@ -420,7 +420,7 @@ type NsxtAppPortProfilePort struct {
 // from the perspective of your organization VDC.
 // DNAT and NO_DNAT - outside traffic going inside
 // SNAT and NO_SNAT - inside traffic going outside
-// More docs in https://docs.xuanson2406.com/en/VMware-Cloud-Director/10.2/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-9E43E3DC-C028-47B3-B7CA-59F0ED40E0A6.html
+// More docs in https://docs.vmware.com/en/VMware-Cloud-Director/10.2/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-9E43E3DC-C028-47B3-B7CA-59F0ED40E0A6.html
 type NsxtNatRule struct {
 	ID string `json:"id,omitempty"`
 	// Name holds a meaningful name for the rule. (API does not enforce uniqueness)

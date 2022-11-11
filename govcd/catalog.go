@@ -42,7 +42,7 @@ func NewCatalog(client *Client) *Catalog {
 }
 
 // Delete deletes the Catalog, returning an error if the vCD call fails.
-// Link to API call: https://code.xuanson2406.com/apis/1046/xuanson2406-cloud-director/doc/doc/operations/DELETE-Catalog.html
+// Link to API call: https://code.vmware.com/apis/1046/vmware-cloud-director/doc/doc/operations/DELETE-Catalog.html
 func (catalog *Catalog) Delete(force, recursive bool) error {
 
 	adminCatalogHREF := catalog.client.VCDHREF
@@ -94,7 +94,7 @@ type Envelope struct {
 func (cat *Catalog) FindCatalogItem(catalogItemName string) (CatalogItem, error) {
 	for _, catalogItems := range cat.Catalog.CatalogItems {
 		for _, catalogItem := range catalogItems.CatalogItem {
-			if catalogItem.Name == catalogItemName && catalogItem.Type == "application/vnd.xuanson2406.vcloud.catalogItem+xml" {
+			if catalogItem.Name == catalogItemName && catalogItem.Type == "application/vnd.vmware.vcloud.catalogItem+xml" {
 
 				cat := NewCatalogItem(cat.client)
 
@@ -181,7 +181,7 @@ func (cat *Catalog) UploadOvf(ovaFileName, itemName, description string, uploadP
 		}
 	}
 
-	catalogItemUploadURL, err := findCatalogItemUploadLink(cat, "application/vnd.xuanson2406.vcloud.uploadVAppTemplateParams+xml")
+	catalogItemUploadURL, err := findCatalogItemUploadLink(cat, "application/vnd.vmware.vcloud.uploadVAppTemplateParams+xml")
 	if err != nil {
 		return UploadTask{}, err
 	}
@@ -264,7 +264,7 @@ func (cat *Catalog) UploadOvfByLink(ovfUrl, itemName, description string) (Task,
 		}
 	}
 
-	catalogItemUploadURL, err := findCatalogItemUploadLink(cat, "application/vnd.xuanson2406.vcloud.uploadVAppTemplateParams+xml")
+	catalogItemUploadURL, err := findCatalogItemUploadLink(cat, "application/vnd.vmware.vcloud.uploadVAppTemplateParams+xml")
 	if err != nil {
 		return Task{}, err
 	}
@@ -555,7 +555,7 @@ func createItemForUpload(client *Client, createHREF *url.URL, catalogItemName st
 			"</UploadVAppTemplateParams>")
 
 	request := client.NewRequest(map[string]string{}, http.MethodPost, *createHREF, reqBody)
-	request.Header.Add("Content-Type", "application/vnd.xuanson2406.vcloud.uploadVAppTemplateParams+xml")
+	request.Header.Add("Content-Type", "application/vnd.vmware.vcloud.uploadVAppTemplateParams+xml")
 
 	response, err := checkResp(client.Http.Do(request))
 	if err != nil {
@@ -586,7 +586,7 @@ func createItemWithLink(client *Client, createHREF *url.URL, catalogItemName, it
 	reqTemplate := `<UploadVAppTemplateParams xmlns="%s" name="%s" sourceHref="%s"><Description>%s</Description></UploadVAppTemplateParams>`
 	reqBody := bytes.NewBufferString(fmt.Sprintf(reqTemplate, types.XMLNamespaceVCloud, catalogItemName, vappTemplateRemoteUrl, itemDescription))
 	request := client.NewRequest(map[string]string{}, http.MethodPost, *createHREF, reqBody)
-	request.Header.Add("Content-Type", "application/vnd.xuanson2406.vcloud.uploadVAppTemplateParams+xml")
+	request.Header.Add("Content-Type", "application/vnd.vmware.vcloud.uploadVAppTemplateParams+xml")
 
 	response, err := checkResp(client.Http.Do(request))
 	if err != nil {
@@ -778,7 +778,7 @@ func (cat *Catalog) UploadMediaImage(mediaName, mediaDescription, filePath strin
 		}
 	}
 
-	catalogItemUploadURL, err := findCatalogItemUploadLink(cat, "application/vnd.xuanson2406.vcloud.media+xml")
+	catalogItemUploadURL, err := findCatalogItemUploadLink(cat, "application/vnd.vmware.vcloud.media+xml")
 	if err != nil {
 		return UploadTask{}, err
 	}
@@ -861,7 +861,7 @@ func (cat *Catalog) GetCatalogItemByName(catalogItemName string, refresh bool) (
 	}
 	for _, catalogItems := range cat.Catalog.CatalogItems {
 		for _, catalogItem := range catalogItems.CatalogItem {
-			if catalogItem.Name == catalogItemName && catalogItem.Type == "application/vnd.xuanson2406.vcloud.catalogItem+xml" {
+			if catalogItem.Name == catalogItemName && catalogItem.Type == "application/vnd.vmware.vcloud.catalogItem+xml" {
 				return cat.GetCatalogItemByHref(catalogItem.HREF)
 			}
 		}
@@ -892,7 +892,7 @@ func (cat *Catalog) GetCatalogItemById(catalogItemId string, refresh bool) (*Cat
 	}
 	for _, catalogItems := range cat.Catalog.CatalogItems {
 		for _, catalogItem := range catalogItems.CatalogItem {
-			if equalIds(catalogItemId, catalogItem.ID, catalogItem.HREF) && catalogItem.Type == "application/vnd.xuanson2406.vcloud.catalogItem+xml" {
+			if equalIds(catalogItemId, catalogItem.ID, catalogItem.HREF) && catalogItem.Type == "application/vnd.vmware.vcloud.catalogItem+xml" {
 				return cat.GetCatalogItemByHref(catalogItem.HREF)
 			}
 		}

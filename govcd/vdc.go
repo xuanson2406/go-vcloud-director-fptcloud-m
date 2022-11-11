@@ -48,7 +48,7 @@ func (vdc *Vdc) undeployAllVdcVApps() error {
 	}
 	for _, resents := range vdc.Vdc.ResourceEntities {
 		for _, resent := range resents.ResourceEntity {
-			if resent.Type == "application/vnd.xuanson2406.vcloud.vApp+xml" {
+			if resent.Type == "application/vnd.vmware.vcloud.vApp+xml" {
 				vappHREF, err := url.Parse(resent.HREF)
 				if err != nil {
 					return err
@@ -82,7 +82,7 @@ func (vdc *Vdc) removeAllVdcVApps() error {
 	}
 	for _, resents := range vdc.Vdc.ResourceEntities {
 		for _, resent := range resents.ResourceEntity {
-			if resent.Type == "application/vnd.xuanson2406.vcloud.vApp+xml" {
+			if resent.Type == "application/vnd.vmware.vcloud.vApp+xml" {
 				vappHREF, err := url.Parse(resent.HREF)
 				if err != nil {
 					return err
@@ -128,7 +128,7 @@ func (vdc *Vdc) Refresh() error {
 }
 
 // Deletes the vdc, returning an error of the vCD call fails.
-// API Documentation: https://code.xuanson2406.com/apis/220/vcloud#/doc/doc/operations/DELETE-Vdc.html
+// API Documentation: https://code.vmware.com/apis/220/vcloud#/doc/doc/operations/DELETE-Vdc.html
 func (vdc *Vdc) Delete(force bool, recursive bool) (Task, error) {
 	util.Logger.Printf("[TRACE] Vdc.Delete - deleting VDC with force: %t, recursive: %t", force, recursive)
 
@@ -659,7 +659,7 @@ func (vdc *Vdc) FindVAppByName(vapp string) (VApp, error) {
 	for _, resents := range vdc.Vdc.ResourceEntities {
 		for _, resent := range resents.ResourceEntity {
 
-			if resent.Name == vapp && resent.Type == "application/vnd.xuanson2406.vcloud.vApp+xml" {
+			if resent.Name == vapp && resent.Type == "application/vnd.vmware.vcloud.vApp+xml" {
 
 				newVapp := NewVApp(vdc.client)
 
@@ -772,7 +772,7 @@ func (vdc *Vdc) FindVAppByID(vappid string) (VApp, error) {
 			hrefslice = strings.SplitAfter(hrefslice[len(hrefslice)-1], "-")
 			res := strings.Join(hrefslice[1:], "")
 
-			if res == urnid && resent.Type == "application/vnd.xuanson2406.vcloud.vApp+xml" {
+			if res == urnid && resent.Type == "application/vnd.vmware.vcloud.vApp+xml" {
 
 				newVapp := NewVApp(vdc.client)
 
@@ -846,7 +846,7 @@ func (vdc *Vdc) GetVAppByName(vappName string, refresh bool) (*VApp, error) {
 
 	for _, resourceEntities := range vdc.Vdc.ResourceEntities {
 		for _, resourceReference := range resourceEntities.ResourceEntity {
-			if resourceReference.Name == vappName && resourceReference.Type == "application/vnd.xuanson2406.vcloud.vApp+xml" {
+			if resourceReference.Name == vappName && resourceReference.Type == "application/vnd.vmware.vcloud.vApp+xml" {
 				return vdc.GetVAppByHref(resourceReference.HREF)
 			}
 		}

@@ -33,7 +33,7 @@ provider:
     # The organization you are authenticating with
     sysOrg: System
     # (Optional) MaxRetryTimeout specifies a time limit (in seconds) for retrying requests made by the SDK
-    # where xuanson2406 Cloud Director may take time to respond and retry mechanism is needed.
+    # where vmware Cloud Director may take time to respond and retry mechanism is needed.
     # This must be >0 to avoid instant timeout errors. If omitted - default value is set.
     # maxRetryTimeout: 60
     #
@@ -112,7 +112,7 @@ vcd:
         # Second storage profile. If omitted, some tests will be skipped.
         storageProfile2: "*"
     # An edge gateway
-    # (see https://pubs.xuanson2406.com/vca/topic/com.xuanson2406.vcloud.api.doc_56/GUID-18B0FB8B-385C-4B6D-982C-4B24D271C646.html)
+    # (see https://pubs.vmware.com/vca/topic/com.vmware.vcloud.api.doc_56/GUID-18B0FB8B-385C-4B6D-982C-4B24D271C646.html)
     edgeGateway: myedgegw
     #
     # The IP of the gateway (must exist)

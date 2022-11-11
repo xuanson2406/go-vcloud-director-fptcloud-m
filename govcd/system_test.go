@@ -294,7 +294,7 @@ func (vcd *TestVCD) Test_CreateDeleteEdgeGatewayAdvanced(check *C) {
 		Network: &types.Reference{
 			HREF: externalNetwork.HREF,
 			ID:   externalNetwork.ID,
-			Type: "application/vnd.xuanson2406.admin.network+xml",
+			Type: "application/vnd.vmware.admin.network+xml",
 			Name: externalNetwork.Name,
 		},
 		UseForDefaultRoute:  true,

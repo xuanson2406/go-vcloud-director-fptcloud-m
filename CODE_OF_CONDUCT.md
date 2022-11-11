@@ -30,4 +30,4 @@ an issue or PR.
 
 **Attribution**
 
-This Code of Conduct is adapted from the xuanson2406 Clarity project, available at this page: https://github.com/xuanson2406/clarity/blob/next/docs/CODE_OF_CONDUCT.md
+This Code of Conduct is adapted from the vmware Clarity project, available at this page: https://github.com/vmware/clarity/blob/next/docs/CODE_OF_CONDUCT.md
