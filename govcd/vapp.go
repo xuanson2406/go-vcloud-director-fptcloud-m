@@ -251,7 +251,11 @@ func addNewVMW(vapp *VApp, name string, vappTemplate VAppTemplate,
 				HREF: templateHref,
 				Name: name,
 			},
-			InstantiationParams: &types.InstantiationParams{}, // network config is injected below
+			InstantiationParams: &types.InstantiationParams{
+				GuestCustomizationSection: &types.GuestCustomizationSection{
+					ComputerName: name,
+				},
+			}, // network config is injected below
 		},
 		AllEULAsAccepted: acceptAllEulas,
 	}
