@@ -1539,6 +1539,32 @@ func (vm *VM) UpdateVmSpecSectionAsync(vmSettingsToUpdate *types.VmSpecSection, 
 		})
 }
 
+// UpdateVmGuestCustomizationSection updates VM Customization Section and returns Task and error.
+func (vm *VM) UpdateVmGuestCustomizationSection(vmGuestCustomizationSection *types.GuestCustomizationSection, description string) (Task, error) {
+	if vm.VM.HREF == "" {
+		return Task{}, fmt.Errorf("cannot update VM Customization Section, VM HREF is unset")
+	}
+
+	// vmSpecSectionModified := true
+	// vmSettingsToUpdate.Modified = &vmSpecSectionModified
+
+	// `reconfigureVm` updates VM name, Description, and any or all of the following sections.
+	//    VirtualHardwareSection
+	//    OperatingSystemSection
+	//    NetworkConnectionSection
+	//    GuestCustomizationSection
+	// Sections not included in the request body will not be updated.
+
+	return vm.client.ExecuteTaskRequest(vm.VM.HREF+"/action/reconfigureVm", http.MethodPost,
+		types.MimeVM, "error updating VM Customization Section: %s", &types.Vm{
+			Xmlns:                     types.XMLNamespaceVCloud,
+			Ovf:                       types.XMLNamespaceOVF,
+			Name:                      vm.VM.Name,
+			Description:               description,
+			GuestCustomizationSection: vmGuestCustomizationSection,
+		})
+}
+
 // UpdateComputePolicy updates VM compute policy and returns refreshed VM or error.
 func (vm *VM) UpdateComputePolicy(computePolicy *types.VdcComputePolicy) (*VM, error) {
 	task, err := vm.UpdateComputePolicyAsync(computePolicy)
