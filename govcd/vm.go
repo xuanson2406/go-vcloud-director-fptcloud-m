@@ -1492,6 +1492,27 @@ func validateEmptyVmParams(reComposeVAppParams *types.RecomposeVAppParamsForEmpt
 	return nil
 }
 
+// reconfigureVM updates vCPU and memory in specific VM
+func (vm *VM) reconfigureVM(numCPU int, numRAM int64, description string) (Task, error) {
+	vmComputeToUpdate := &types.VmSpecSection{
+		Info:    vm.VM.VmSpecSection.Info,
+		NumCpus: &numCPU,
+		MemoryResourceMb: &types.MemoryResourceMb{
+			Configured: numRAM,
+		},
+		HardwareVersion: &types.HardwareVersion{
+			HREF:  vm.VM.VmSpecSection.HardwareVersion.HREF,
+			Type:  vm.VM.VmSpecSection.HardwareVersion.Type,
+			Value: vm.VM.VmSpecSection.HardwareVersion.Value,
+		},
+	}
+	task, err := vm.UpdateVmSpecSectionAsync(vmComputeToUpdate, description)
+	if err != nil {
+		return Task{}, err
+	}
+	return task, nil
+}
+
 // UpdateVmSpecSection updates VM Spec section and returns refreshed VM or error.
 func (vm *VM) UpdateVmSpecSection(vmSettingsToUpdate *types.VmSpecSection, description string) (*VM, error) {
 	task, err := vm.UpdateVmSpecSectionAsync(vmSettingsToUpdate, description)
