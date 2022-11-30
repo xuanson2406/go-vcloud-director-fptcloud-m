@@ -1493,7 +1493,7 @@ func validateEmptyVmParams(reComposeVAppParams *types.RecomposeVAppParamsForEmpt
 }
 
 // reconfigureVM updates vCPU and memory in specific VM
-func (vm *VM) reconfigureVM(numCPU int, numRAM int64, description string) (Task, error) {
+func (vm *VM) ReconfigureVM(numCPU int, numRAM int64, description string) (Task, error) {
 	vmComputeToUpdate := &types.VmSpecSection{
 		Info:    vm.VM.VmSpecSection.Info,
 		NumCpus: &numCPU,
