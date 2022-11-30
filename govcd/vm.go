@@ -1506,11 +1506,7 @@ func (vm *VM) reconfigureVM(numCPU int, numRAM int64, description string) (Task,
 			Value: vm.VM.VmSpecSection.HardwareVersion.Value,
 		},
 	}
-	task, err := vm.UpdateVmSpecSectionAsync(vmComputeToUpdate, description)
-	if err != nil {
-		return Task{}, err
-	}
-	return task, nil
+	return vm.UpdateVmSpecSectionAsync(vmComputeToUpdate, description)
 }
 
 // UpdateVmSpecSection updates VM Spec section and returns refreshed VM or error.
