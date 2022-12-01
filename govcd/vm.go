@@ -1493,17 +1493,30 @@ func validateEmptyVmParams(reComposeVAppParams *types.RecomposeVAppParamsForEmpt
 }
 
 // reconfigureVM updates vCPU and memory in specific VM
-func (vm *VM) ReconfigureVM(numCPU int, numRAM int64, description string) (Task, error) {
+func (vm *VM) ReconfigureVM(numCPU int, numRAM int, diskSize int, description string) (Task, error) {
+	diskSetting := &types.DiskSettings{
+		SizeMb:            int64(1024 * diskSize),
+		UnitNumber:        vm.VM.VmSpecSection.DiskSection.DiskSettings[0].UnitNumber,
+		BusNumber:         vm.VM.VmSpecSection.DiskSection.DiskSettings[0].BusNumber,
+		AdapterType:       vm.VM.VmSpecSection.DiskSection.DiskSettings[0].AdapterType,
+		OverrideVmDefault: vm.VM.VmSpecSection.DiskSection.DiskSettings[0].OverrideVmDefault,
+		ThinProvisioned:   vm.VM.VmSpecSection.DiskSection.DiskSettings[0].ThinProvisioned,
+	}
+	diskSettings := make([]*types.DiskSettings, 5)
+	diskSettings = append(diskSettings, diskSetting)
 	vmComputeToUpdate := &types.VmSpecSection{
 		Info:    vm.VM.VmSpecSection.Info,
 		NumCpus: &numCPU,
 		MemoryResourceMb: &types.MemoryResourceMb{
-			Configured: numRAM,
+			Configured: int64(numRAM) * 1024,
 		},
 		HardwareVersion: &types.HardwareVersion{
 			HREF:  vm.VM.VmSpecSection.HardwareVersion.HREF,
 			Type:  vm.VM.VmSpecSection.HardwareVersion.Type,
 			Value: vm.VM.VmSpecSection.HardwareVersion.Value,
+		},
+		DiskSection: &types.DiskSection{
+			DiskSettings: diskSettings,
 		},
 	}
 	return vm.UpdateVmSpecSectionAsync(vmComputeToUpdate, description)
