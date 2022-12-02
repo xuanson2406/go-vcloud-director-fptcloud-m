@@ -36,7 +36,7 @@ func setProductSectionList(client *Client, href string, productSection *types.Pr
 }
 
 // updateProductSectionList: add public key into specific VM
-func updateProductSectionList(client *Client, vm *VM, sshKey string) (Task, error) {
+func UpdateProductSectionList(client *Client, vm *VM, sshKey string) (Task, error) {
 	if vm == nil {
 		return Task{}, fmt.Errorf("vm cannot be empty to set product section")
 	}
