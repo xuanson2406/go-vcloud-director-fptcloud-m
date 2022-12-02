@@ -35,6 +35,26 @@ func setProductSectionList(client *Client, href string, productSection *types.Pr
 	return nil
 }
 
+// updateProductSectionList: add public key into specific VM
+func updateProductSectionList(client *Client, vm *VM, sshKey string) (Task, error) {
+	if vm == nil {
+		return Task{}, fmt.Errorf("vm cannot be empty to set product section")
+	}
+	productSection, err := getProductSectionList(client, vm.VM.HREF)
+	if err != nil {
+		return Task{}, fmt.Errorf("Unable add public key to VM : [%s]", err.Error())
+	}
+
+	productSection.Xmlns = types.XMLNamespaceVCloud
+	productSection.Ovf = types.XMLNamespaceOVF
+	productSection.ProductSection.Property[0].Key = "public-keys"
+	productSection.ProductSection.Property[0].Value.Value = sshKey
+	productSection.ProductSection.Property[0].UserConfigurable = true
+
+	return client.ExecuteTaskRequest(vm.VM.HREF+"/productSections", http.MethodPut,
+		types.MimeProductSection, "error setting product section: %s", productSection)
+}
+
 // getProductSectionList is a shared function for both vApp and VM
 func getProductSectionList(client *Client, href string) (*types.ProductSectionList, error) {
 	if href == "" {
