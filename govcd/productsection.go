@@ -44,7 +44,7 @@ func UpdateProductSectionList(client *Client, vm *VM, sshKey string) (Task, erro
 	if err != nil {
 		return Task{}, fmt.Errorf("Unable add public key to VM : [%s]", err.Error())
 	}
-
+	productSection.ProductSection.Property[0].Value = &types.Value{}
 	productSection.Xmlns = types.XMLNamespaceVCloud
 	productSection.Ovf = types.XMLNamespaceOVF
 	productSection.ProductSection.Property[0].Key = "public-keys"

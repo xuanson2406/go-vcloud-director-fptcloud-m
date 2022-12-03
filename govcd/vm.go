@@ -1495,6 +1495,7 @@ func validateEmptyVmParams(reComposeVAppParams *types.RecomposeVAppParamsForEmpt
 // reconfigureVM updates vCPU and memory in specific VM
 func (vm *VM) ReconfigureVM(numCPU int, numRAM int, diskSize int, description string) (Task, error) {
 	diskSetting := &types.DiskSettings{
+		DiskId:            vm.VM.VmSpecSection.DiskSection.DiskSettings[0].DiskId,
 		SizeMb:            int64(1024 * diskSize),
 		UnitNumber:        vm.VM.VmSpecSection.DiskSection.DiskSettings[0].UnitNumber,
 		BusNumber:         vm.VM.VmSpecSection.DiskSection.DiskSettings[0].BusNumber,
