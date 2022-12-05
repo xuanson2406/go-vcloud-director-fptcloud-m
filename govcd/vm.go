@@ -1595,6 +1595,23 @@ func (vm *VM) UpdateVmGuestCustomizationSection(vmGuestCustomizationSection *typ
 			GuestCustomizationSection: vmGuestCustomizationSection,
 		})
 }
+func (vm *VM) UpdateVmGuestCustomization(computerName string, script string) (Task, error) {
+	vmGuestCustomizationSection := &types.GuestCustomizationSection{
+		Ovf:   types.XMLNamespaceOVF,
+		Xsi:   types.XMLNamespaceXSI,
+		Xmlns: types.XMLNamespaceVCloud,
+
+		HREF:                vm.VM.HREF,
+		VirtualMachineID:    vm.VM.ID,
+		Type:                types.MimeGuestCustomizationSection,
+		Info:                "Specifies Guest OS Customization Settings",
+		Enabled:             takeBoolPointer(true),
+		ComputerName:        computerName,
+		CustomizationScript: script,
+		ChangeSid:           takeBoolPointer(false),
+	}
+	return vm.UpdateVmGuestCustomizationSection(vmGuestCustomizationSection, "")
+}
 
 // UpdateComputePolicy updates VM compute policy and returns refreshed VM or error.
 func (vm *VM) UpdateComputePolicy(computePolicy *types.VdcComputePolicy) (*VM, error) {
