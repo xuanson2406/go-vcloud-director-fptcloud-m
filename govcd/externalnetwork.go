@@ -32,7 +32,7 @@ func getExternalNetworkHref(client *Client) (string, error) {
 	}
 
 	for _, extensionLink := range extensions.Link {
-		if extensionLink.Type == "application/vnd.xuanson2406.admin.vmwExternalNetworkReferences+xml" {
+		if extensionLink.Type == "application/vnd.vmware.admin.vmwExternalNetworkReferences+xml" {
 			return extensionLink.HREF, nil
 		}
 	}

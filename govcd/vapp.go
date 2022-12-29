@@ -288,7 +288,7 @@ func addNewVMW(vapp *VApp, name string, vappTemplate VAppTemplate,
 
 // ========================= issue#252 ==================================
 // TODO: To be refactored, handling networks better. See issue#252 for details
-// https://github.com/xuanson2406/go-vcloud-director-fptcloud/issues/252
+// https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/issues/252
 // ======================================================================
 func (vapp *VApp) RemoveVM(vm VM) error {
 	err := vapp.Refresh()

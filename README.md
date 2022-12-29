@@ -1,4 +1,4 @@
-# go-vcloud-director-fptcloud [![GoDoc](https://godoc.org/github.com/xuanson2406/go-vcloud-director-fptcloud?status.svg)](http://godoc.org/github.com/xuanson2406/go-vcloud-director-fptcloud) [![Chat](https://img.shields.io/badge/chat-on%20slack-brightgreen.svg)](https://vmware.slack.com/messages/CBBBXVB16)
+# go-vcloud-director-fptcloud [![GoDoc](https://godoc.org/gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud?status.svg)](http://godoc.org/gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud) [![Chat](https://img.shields.io/badge/chat-on%20slack-brightgreen.svg)](https://vmware.slack.com/messages/CBBBXVB16)
 
 This repo contains the `go-vcloud-director-fptcloud` package which implements
 an SDK for vmware Cloud Director. The project serves the needs of Golang
@@ -23,7 +23,7 @@ you no longer need to use `GOPATH`. You can clone the branch in any directory
 you like and go will fetch dependencies specified in the `go.mod` file:
 ```
 cd ~/Documents/mycode
-git clone https://github.com/xuanson2406/go-vcloud-director-fptcloud.git
+git clone https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud.git
 cd go-vcloud-director-fptcloud/govcd
 go build
 ```

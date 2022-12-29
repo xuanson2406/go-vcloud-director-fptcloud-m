@@ -176,7 +176,7 @@ func (vcd *TestVCD) Test_UpdateVdcFlex(check *C) {
 	check.Assert(adminVdc.AdminVdc.IsEnabled, Equals, vdcConfiguration.IsEnabled)
 	check.Assert(adminVdc.AdminVdc.AllocationModel, Equals, vdcConfiguration.AllocationModel)
 
-	// test part to reproduce https://github.com/xuanson2406/go-vcloud-director-fptcloud/issues/431
+	// test part to reproduce https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/issues/431
 	// this part manages to create task error which later on VDC update fails if type properties order is bad
 	providerVdcHref := getVdcProviderVdcHref(vcd, check)
 	pvdcStorageProfile, err := vcd.client.QueryProviderVdcStorageProfileByName(vcd.config.VCD.StorageProfile.SP2, providerVdcHref)

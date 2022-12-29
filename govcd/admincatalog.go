@@ -15,7 +15,7 @@ import (
 // To be able to get an AdminCatalog representation, users must have
 // admin credentials to the System org. AdminCatalog is used
 // for creating, updating, and deleting a Catalog.
-// Definition: https://code.xuanson2406.com/apis/220/vcloud#/doc/doc/types/AdminCatalogType.html
+// Definition: https://code.vmware.com/apis/220/vcloud#/doc/doc/types/AdminCatalogType.html
 type AdminCatalog struct {
 	AdminCatalog *types.AdminCatalog
 	client       *Client
@@ -38,7 +38,7 @@ func NewAdminCatalogWithParent(client *Client, parent organization) *AdminCatalo
 }
 
 // Delete deletes the Catalog, returning an error if the vCD call fails.
-// Link to API call: https://code.xuanson2406.com/apis/220/vcloud#/doc/doc/operations/DELETE-Catalog.html
+// Link to API call: https://code.vmware.com/apis/220/vcloud#/doc/doc/operations/DELETE-Catalog.html
 func (adminCatalog *AdminCatalog) Delete(force, recursive bool) error {
 	catalog := NewCatalog(adminCatalog.client)
 	catalog.Catalog = &adminCatalog.AdminCatalog.Catalog
@@ -49,7 +49,7 @@ func (adminCatalog *AdminCatalog) Delete(force, recursive bool) error {
 // Any differences that may be legally applied will be updated.
 // Returns an error if the call to vCD fails. Update automatically performs
 // a refresh with the admin catalog it gets back from the rest api
-// Link to API call: https://code.xuanson2406.com/apis/220/vcloud#/doc/doc/operations/PUT-Catalog.html
+// Link to API call: https://code.vmware.com/apis/220/vcloud#/doc/doc/operations/PUT-Catalog.html
 func (adminCatalog *AdminCatalog) Update() error {
 	reqCatalog := &types.Catalog{
 		Name:        adminCatalog.AdminCatalog.Catalog.Name,
@@ -63,7 +63,7 @@ func (adminCatalog *AdminCatalog) Update() error {
 	}
 	catalog := &types.AdminCatalog{}
 	_, err := adminCatalog.client.ExecuteRequest(adminCatalog.AdminCatalog.HREF, http.MethodPut,
-		"application/vnd.xuanson2406.admin.catalog+xml", "error updating catalog: %s", vcomp, catalog)
+		"application/vnd.vmware.admin.catalog+xml", "error updating catalog: %s", vcomp, catalog)
 	adminCatalog.AdminCatalog = catalog
 	return err
 }

@@ -1,64 +1,64 @@
 ## 2.17.0 (TBC)
 
-Changes in progress for v2.17.0 are available at [.changes/v2.17.0](https://github.com/xuanson2406/go-vcloud-director-fptcloud/tree/main/.changes/v2.17.0) until the release.
+Changes in progress for v2.17.0 are available at [.changes/v2.17.0](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/tree/main/.changes/v2.17.0) until the release.
 
 ## 2.16.0 (August 2, 2022)
 
 ## FEATURES
-* Added support for `DnsServers` on `OpenApiOrgVdcNetworkDhcp` struct ([#465](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/465))
-* Added new methods `Org.GetAllSecurityTaggedEntities`, `Org.GetAllSecurityTaggedEntitiesByName`,  `Org.GetAllSecurityTagValues`, `VM.GetVMSecurityTags`, `Org.UpdateSecurityTag` and `VM.UpdateVMSecurityTags` to deal with security tags ([#467](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/467))
-* Added new structs `types.SecurityTag`, `types.SecurityTaggedEntity`, `types.SecurityTagValue` and `types.EntitySecurityTags` ([#467](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/467))
-* Added `Vdc.GetControlAccess`, `Vdc.SetControlAccess` and `Vdc.DeleteControlAccess` to get, set and delete control access capabilities to VDCs ([#470](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/470))
+* Added support for `DnsServers` on `OpenApiOrgVdcNetworkDhcp` struct ([#465](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/465))
+* Added new methods `Org.GetAllSecurityTaggedEntities`, `Org.GetAllSecurityTaggedEntitiesByName`,  `Org.GetAllSecurityTagValues`, `VM.GetVMSecurityTags`, `Org.UpdateSecurityTag` and `VM.UpdateVMSecurityTags` to deal with security tags ([#467](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/467))
+* Added new structs `types.SecurityTag`, `types.SecurityTaggedEntity`, `types.SecurityTagValue` and `types.EntitySecurityTags` ([#467](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/467))
+* Added `Vdc.GetControlAccess`, `Vdc.SetControlAccess` and `Vdc.DeleteControlAccess` to get, set and delete control access capabilities to VDCs ([#470](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/470))
 * Added support to set, get and delete metadata to CatalogItem with the methods
   `CatalogItem.AddMetadataEntry`, `CatalogItem.AddMetadataEntryAsync`, `CatalogItem.GetMetadata`,
-  `CatalogItem.DeleteMetadataEntry` and `CatalogItem.DeleteMetadataEntryAsync`. ([#471](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/471))
+  `CatalogItem.DeleteMetadataEntry` and `CatalogItem.DeleteMetadataEntryAsync`. ([#471](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/471))
 * Added `AdminCatalog.MergeMetadata`,`AdminCatalog.MergeMetadataAsync`, `AdminOrg.MergeMetadata`, `AdminOrg.MergeMetadataAsync`, 
 `CatalogItem.MergeMetadata`, `CatalogItem.MergeMetadataAsync`, `Disk.MergeMetadata`, `Disk.MergeMetadataAsync`, `Media.MergeMetadata`, 
 `Media.MergeMetadataAsync`, `MediaRecord.MergeMetadata`, `MediaRecord.MergeMetadataAsync`, `OpenAPIOrgVdcNetwork.MergeMetadata`, 
 `OpenAPIOrgVdcNetwork.MergeMetadataAsync`, `OrgVDCNetwork.MergeMetadata`, `OrgVDCNetwork.MergeMetadataAsync`, 
 `VApp.MergeMetadata`, `VApp.MergeMetadataAsync`, `VAppTemplate.MergeMetadata`, `VAppTemplate.MergeMetadataAsync`, 
 `VM.MergeMetadata`, `VM.MergeMetadataAsync`, `Vdc.MergeMetadata`, `Vdc.MergeMetadataAsync` to merge metadata, 
-which both updates existing metadata with same key and adds new entries for the non-existent ones ([#473](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/473))
+which both updates existing metadata with same key and adds new entries for the non-existent ones ([#473](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/473))
 * Added NSX-T Edge Gateway methods `NsxtEdgeGateway.GetNsxtRouteAdvertisement`,
   `NsxtEdgeGateway.GetNsxtRouteAdvertisementWithContext`,
   `NsxtEdgeGateway.UpdateNsxtRouteAdvertisement`,
   `NsxtEdgeGateway.UpdateNsxtRouteAdvertisementWithContext`,
   `NsxtEdgeGateway.DeleteNsxtRouteAdvertisement` and
   `NsxtEdgeGateway.DeleteNsxtRouteAdvertisementWithContext` that allow to manage NSX-T Route
-  Advertisement ([#478](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/478), [#480](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/480))
+  Advertisement ([#478](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/478), [#480](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/480))
 * Added new methods `NsxtEdgeGateway.GetBgpConfiguration`, `NsxtEdgeGateway.UpdateBgpConfiguration`,
   `NsxtEdgeGateway.DisableBgpConfiguration` for BGP Configuration management on NSX-T Edge Gateway
-  ([#480](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/480))
+  ([#480](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/480))
 * Added new structs `types.EdgeBgpConfig`, `types.EdgeBgpGracefulRestartConfig`,
-  `types.EdgeBgpConfigVersion` for BGP Configuration management on NSX-T Edge Gateway ([#480](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/480))
+  `types.EdgeBgpConfigVersion` for BGP Configuration management on NSX-T Edge Gateway ([#480](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/480))
 * Added support for Dynamic Security Groups in VCD 10.3 by expanding `types.NsxtFirewallGroup` to
   accommodate fields required for Dynamic Security Groups, implemented automatic API elevation to
   v36.0. Added New functions `VdcGroup.CreateNsxtFirewallGroup`,
-  `NsxtFirewallGroup.IsDynamicSecurityGroup` ([#487](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/487))
+  `NsxtFirewallGroup.IsDynamicSecurityGroup` ([#487](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/487))
 * Added support for managing NSX-T Edge Gateway BGP IP Prefix Lists. It is done by adding types `EdgeBgpIpPrefixList` and
 `types.EdgeBgpIpPrefixList` with functions `CreateBgpIpPrefixList`, `GetAllBgpIpPrefixLists`,
-`GetBgpIpPrefixListByName`, `GetBgpIpPrefixListById`, `Update` and `Delete`  ([#488](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/488))
+`GetBgpIpPrefixListByName`, `GetBgpIpPrefixListById`, `Update` and `Delete`  ([#488](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/488))
 * Added support for managing NSX-T Edge Gateway BGP Neighbor. It is done by adding types `EdgeBgpNeighbor` and
   `types.EdgeBgpNeighbor` with functions `CreateBgpNeighbor`, `GetAllBgpNeighbors`,
-  `GetBgpNeighborByIp`, `GetBgpNeighborById`, `Update` and `Delete`  ([#489](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/489))
+  `GetBgpNeighborByIp`, `GetBgpNeighborById`, `Update` and `Delete`  ([#489](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/489))
 
 ## IMPROVEMENTS
-* Added methods `client.CreateVdcComputePolicy`, `client.GetVdcComputePolicyById`, `client.GetAllVdcComputePolicies` ([#468](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/468))
+* Added methods `client.CreateVdcComputePolicy`, `client.GetVdcComputePolicyById`, `client.GetAllVdcComputePolicies` ([#468](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/468))
 * Added additional methods for convenience of NSX-T Org Network DHCP handling
   `OpenApiOrgVdcNetwork.GetOpenApiOrgVdcNetworkDhcp`, `OpenApiOrgVdcNetwork.DeletNetworkDhcp`
-  `OpenApiOrgVdcNetwork.UpdateDhcp` ([#469](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/469))
-* Added additional support for UDF type ISO files in `catalog.UploadMediaImage` ([#479](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/479))
+  `OpenApiOrgVdcNetwork.UpdateDhcp` ([#469](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/469))
+* Added additional support for UDF type ISO files in `catalog.UploadMediaImage` ([#479](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/479))
 * Added `SupportedFeatureSet` attribute to `NsxtAlbServiceEngineGroup` and `NsxtAlbConfig` to
 support v37.0 license management for AVI Load Balancer and replace `LicenseType` from
-`NsxtAlbController` ([#485](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/485))
+`NsxtAlbController` ([#485](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/485))
 
 ## BUG FIXES
-* Fixed method `adminOrg.FindCatalogRecords` to escape name in query URL ([#466](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/466))
-* Fixed method `vm.WaitForDhcpIpByNicIndexes` to ignore not found Edge Gateway ([#481](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/481))
+* Fixed method `adminOrg.FindCatalogRecords` to escape name in query URL ([#466](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/466))
+* Fixed method `vm.WaitForDhcpIpByNicIndexes` to ignore not found Edge Gateway ([#481](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/481))
 
 ## DEPRECATIONS
-* Deprecated `org.GetVdcComputePolicyById`, `adminOrg.GetVdcComputePolicyById` ([#468](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/468))
-* Deprecated `org.GetAllVdcComputePolicies`, `adminOrg.GetAllVdcComputePolicies`, `org.CreateVdcComputePolicy` ([#468](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/468))
+* Deprecated `org.GetVdcComputePolicyById`, `adminOrg.GetVdcComputePolicyById` ([#468](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/468))
+* Deprecated `org.GetAllVdcComputePolicies`, `adminOrg.GetAllVdcComputePolicies`, `org.CreateVdcComputePolicy` ([#468](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/468))
 
 
 ## 2.15.0 (April 14, 2022)
@@ -67,224 +67,224 @@ support v37.0 license management for AVI Load Balancer and replace `LicenseType`
 * Added support for Shareable disks, i.e., independent disks that can be attached to multiple VMs which is available from
   API v35.0 onwards. Also added UUID to the Disk structure which is a new member that is returned from v36.0 onwards. This
   member holds a UUID that can be used to correlate the disk that is attached to a particular VM from the VCD side and the
-  VM host side. ([#383](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/383))
-* Added support for uploading OVF using URL `catalog.UploadOvfByLink` ([#422](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/422), [#426](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/426))
-* Added support for updating vApp template `vAppTemplate.UpdateAsync` and `vAppTemplate.Update` ([#422](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/422))
-* Add methods `catalog.PublishToExternalOrganizations` and `adminCatalog.PublishToExternalOrganizations` ([#424](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/424))
+  VM host side. ([#383](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/383))
+* Added support for uploading OVF using URL `catalog.UploadOvfByLink` ([#422](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/422), [#426](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/426))
+* Added support for updating vApp template `vAppTemplate.UpdateAsync` and `vAppTemplate.Update` ([#422](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/422))
+* Add methods `catalog.PublishToExternalOrganizations` and `adminCatalog.PublishToExternalOrganizations` ([#424](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/424))
 * Added types `types.MetadataStringValue`, `types.MetadataNumberValue`, `types.MetadataDateTimeValue` and `types.MetadataBooleanValue` 
-  for adding different kind of metadata to entities ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
+  for adding different kind of metadata to entities ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
 * Added support to set, get and delete metadata to AdminCatalog with the methods 
   `AdminCatalog.AddMetadataEntry`, `AdminCatalog.AddMetadataEntryAsync`, `AdminCatalog.GetMetadata`, 
-  `AdminCatalog.DeleteMetadataEntry` and `AdminCatalog.DeleteMetadataEntryAsync`. ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
-* Added support to get metadata from Catalog with method `Catalog.GetMetadata` ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
+  `AdminCatalog.DeleteMetadataEntry` and `AdminCatalog.DeleteMetadataEntryAsync`. ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
+* Added support to get metadata from Catalog with method `Catalog.GetMetadata` ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
 * Added to `VM` and `VApp` the methods `DeleteMetadataEntry`, `DeleteMetadataEntryAsync`, `AddMetadataEntry` and `AddMetadataEntryAsync`
-  so it follows the same convention as the rest of entities that uses metadata. ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
-* Added methods `vm.ChangeCPU` and `vm.ChangeMemory` which uses the latest API structure instead of deprecated ones ([#432](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/432))
-* Added environment variable `GOVCD_API_VERSION` so API version can be set manually ([#434](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/434))
+  so it follows the same convention as the rest of entities that uses metadata. ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
+* Added methods `vm.ChangeCPU` and `vm.ChangeMemory` which uses the latest API structure instead of deprecated ones ([#432](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/432))
+* Added environment variable `GOVCD_API_VERSION` so API version can be set manually ([#434](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/434))
 * Added support to set, get and delete metadata to AdminOrg with the methods
   `AdminOrg.AddMetadataEntry`, `AdminOrg.AddMetadataEntryAsync`, `AdminOrg.GetMetadata`,
-  `AdminOrg.DeleteMetadataEntry` and `AdminOrg.DeleteMetadataEntryAsync`. ([#438](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/438))
+  `AdminOrg.DeleteMetadataEntry` and `AdminOrg.DeleteMetadataEntryAsync`. ([#438](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/438))
 * Added support to get metadata to Org with the method
-  `Org.GetMetadata`. ([#438](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/438))
+  `Org.GetMetadata`. ([#438](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/438))
 * Added support to set, get and delete metadata to Disk with the methods
   `Disk.AddMetadataEntry`, `Disk.AddMetadataEntryAsync`, `Disk.GetMetadata`,
-  `Disk.DeleteMetadataEntry` and `Disk.DeleteMetadataEntryAsync`. ([#438](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/438))
+  `Disk.DeleteMetadataEntry` and `Disk.DeleteMetadataEntryAsync`. ([#438](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/438))
 * Added new structure `AnyTypeEdgeGateway` which supports retreving both types of Edge Gateways
   (NSX-V and NSX-T) with methods `AdminOrg.GetAnyTypeEdgeGatewayById`,
   `Org.GetAnyTypeEdgeGatewayById`, `AnyTypeEdgeGateway.IsNsxt`, `AnyTypeEdgeGateway.IsNsxv`,
-  `AnyTypeEdgeGateway.GetNsxtEdgeGateway` ([#443](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/443))
+  `AnyTypeEdgeGateway.GetNsxtEdgeGateway` ([#443](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/443))
 * Added functions `VdcGroup.GetCapabilities`, `VdcGroup.IsNsxt`,
   `VdcGroup.GetOpenApiOrgVdcNetworkByName`, `VdcGroup.GetAllOpenApiOrgVdcNetworks`,
-  `Org.GetOpenApiOrgVdcNetworkByNameAndOwnerId` ([#443](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/443))
-* Added method `AdminOrg.FindCatalogRecords` that allows to query `types.CatalogRecord` by their catalog name. ([#450](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/450))
-* Added methods `Client.QueryWithNotEncodedParamsWithHeaders` and `Client.QueryWithNotEncodedParamsWithApiVersionWithHeaders` so HTTP headers can be added now when doing API queries. ([#450](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/450))
-* Added functions `VdcGroup.GetNsxtFirewallGroupByName` and `VdcGroup.GetNsxtFirewallGroupById` ([#451](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/451))
+  `Org.GetOpenApiOrgVdcNetworkByNameAndOwnerId` ([#443](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/443))
+* Added method `AdminOrg.FindCatalogRecords` that allows to query `types.CatalogRecord` by their catalog name. ([#450](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/450))
+* Added methods `Client.QueryWithNotEncodedParamsWithHeaders` and `Client.QueryWithNotEncodedParamsWithApiVersionWithHeaders` so HTTP headers can be added now when doing API queries. ([#450](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/450))
+* Added functions `VdcGroup.GetNsxtFirewallGroupByName` and `VdcGroup.GetNsxtFirewallGroupById` ([#451](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/451))
 * Added support for for Network Context Profile lookup using `GetAllNetworkContextProfiles` and
-  `GetNetworkContextProfilesByNameScopeAndContext` functions ([#452](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/452))
+  `GetNetworkContextProfilesByNameScopeAndContext` functions ([#452](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/452))
 * Add support for NSX-T Distributed Firewall rule management using type `DistributedFirewall` and
 `VdcGroup.GetDistributedFirewall`, `VdcGroup.UpdateDistributedFirewall`,
-`VdcGroup.DeleteAllDistributedFirewallRules`, `DistributedFirewall.DeleteAllRules` ([#452](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/452))
+`VdcGroup.DeleteAllDistributedFirewallRules`, `DistributedFirewall.DeleteAllRules` ([#452](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/452))
 * Added support to set, get and delete metadata to the following resources via its HREF:
   `catalog`, `catalog item`, `edge gateway`, `independent disk`, `media`, `network`, `org`, `PVDC`, `PVDC storage profile`, `vApp`, `vApp template`,`VDC` and `VDC storage profile`;
   with the methods
   `VCDClient.GetMetadataByHref`, `VCDClient.AddMetadataEntryByHref`, `VCDClient.AddMetadataEntryByHrefAsync`,
-  `VCDClient.DeleteMetadataEntryByHref` and `VCDClient.DeleteMetadataEntryByHrefAsync` ([#454](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/454))
-* Added functions `VdcGroup.GetOpenApiOrgVdcNetworkById` and `VdcGroup.CreateOpenApiOrgVdcNetwork` ([#456](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/456))
-* New method added `Disk.GetAttachedVmsHrefs` ([#436](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/436))
+  `VCDClient.DeleteMetadataEntryByHref` and `VCDClient.DeleteMetadataEntryByHrefAsync` ([#454](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/454))
+* Added functions `VdcGroup.GetOpenApiOrgVdcNetworkById` and `VdcGroup.CreateOpenApiOrgVdcNetwork` ([#456](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/456))
+* New method added `Disk.GetAttachedVmsHrefs` ([#436](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/436))
 
 ## IMPROVEMENTS
-* Bumped Default API Version to V35.0 ([#434](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/434))
-* Disk methods have now the ability to access new properties from API version 36.0. They are: `DiskRecordType.SharingType`, `DiskRecordType.UUID`, `DiskRecordType.Encrypted`, `Disk.SharingType`, `Disk.UUID` and `Disk.Encrypted` ([#436](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/436))
-* Added support for `User` entities imported from LDAP, with `IsExternal` property ([#439](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/439))
-* Added support for users list attribute for `Group` ([#439](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/439))
-* Improved `group.Update()` to avoid sending the users list to VCD to avoid unwanted errors ([#449](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/449))
+* Bumped Default API Version to V35.0 ([#434](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/434))
+* Disk methods have now the ability to access new properties from API version 36.0. They are: `DiskRecordType.SharingType`, `DiskRecordType.UUID`, `DiskRecordType.Encrypted`, `Disk.SharingType`, `Disk.UUID` and `Disk.Encrypted` ([#436](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/436))
+* Added support for `User` entities imported from LDAP, with `IsExternal` property ([#439](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/439))
+* Added support for users list attribute for `Group` ([#439](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/439))
+* Improved `group.Update()` to avoid sending the users list to VCD to avoid unwanted errors ([#449](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/449))
 * NSX-T Edge Gateway now supports VDC Groups by switching from `OrgVdc` to `OwnerRef` field.
   Additional methods `NsxtEdgeGateway.MoveToVdcOrVdcGroup()`,
   `Org.GetNsxtEdgeGatewayByNameAndOwnerId()`, `VdcGroup.GetNsxtEdgeGatewayByName()`,
-  `VdcGroup.GetAllNsxtEdgeGateways()`, `org.GetVdcGroupById` ([#440](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/440))
+  `VdcGroup.GetAllNsxtEdgeGateways()`, `org.GetVdcGroupById` ([#440](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/440))
 * Added additional helper functions `OwnerIsVdcGroup()`, `OwnerIsVdc()`, `VdcGroup.GetCapabilities()`,
-  `VdcGroup.IsNsxt()` ([#440](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/440))
+  `VdcGroup.IsNsxt()` ([#440](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/440))
 * Added support to set, get and delete metadata to VDC Networks with the methods
   `OrgVDCNetwork.AddMetadataEntry`, `OrgVDCNetwork.AddMetadataEntryAsync`, `OrgVDCNetwork.GetMetadata`,
-  `OrgVDCNetwork.DeleteMetadataEntry` and `OrgVDCNetwork.DeleteMetadataEntryAsync` ([#442](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/442))
-* Added `CanPublishExternally` and `CanSubscribe` attributes to `OrgGeneralSettings` struct. ([#444](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/444))
-* Added workaround to tests for Org Catalog publishing bug when dealing with LDAP ([#458](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/458))
-* Added clean-up actions to some tests that were uploading vAppTemplates/medias to catalogs ([#458](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/458))
+  `OrgVDCNetwork.DeleteMetadataEntry` and `OrgVDCNetwork.DeleteMetadataEntryAsync` ([#442](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/442))
+* Added `CanPublishExternally` and `CanSubscribe` attributes to `OrgGeneralSettings` struct. ([#444](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/444))
+* Added workaround to tests for Org Catalog publishing bug when dealing with LDAP ([#458](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/458))
+* Added clean-up actions to some tests that were uploading vAppTemplates/medias to catalogs ([#458](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/458))
 * Added support to set, get and delete metadata to OpenAPI VDC Networks through XML with the methods
   `OpenApiOrgVdcNetwork.AddMetadataEntry`, `OpenApiOrgVdcNetwork.GetMetadata`,
-  `OpenApiOrgVdcNetwork.DeleteMetadataEntry` ([#459](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/459))
+  `OpenApiOrgVdcNetwork.DeleteMetadataEntry` ([#459](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/459))
 * Added `Vdc.GetNsxtAppPortProfileByName` and `VdcGroup.GetNsxtAppPortProfileByName` for NSX-T
-  Application Port Profile lookup ([#460](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/460))
+  Application Port Profile lookup ([#460](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/460))
 
 ## BUG FIXES
-* Fixed Issue #431 "Wrong order in Task structure" ([#433](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/433))
-* Fixed Issue where VDC creation with storage profile `enabled=false` wasn't working. `VdcStorageProfile.enabled` and `VdcStorageProfileConfiguration.enabled` changed to pointers ([#433](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/433))
-* Fixed method `client.GetStorageProfileByHref` to return IOPS `IopsSettings` ([#435](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/435))
-* `Vms.VmReference` changed to array to fix incorrect deserialization ([#436](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/436))
-* `Catalog.QueryMediaList` method was not working because `fmt.Sprintf` was being misused ([#441](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/441))
+* Fixed Issue #431 "Wrong order in Task structure" ([#433](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/433))
+* Fixed Issue where VDC creation with storage profile `enabled=false` wasn't working. `VdcStorageProfile.enabled` and `VdcStorageProfileConfiguration.enabled` changed to pointers ([#433](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/433))
+* Fixed method `client.GetStorageProfileByHref` to return IOPS `IopsSettings` ([#435](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/435))
+* `Vms.VmReference` changed to array to fix incorrect deserialization ([#436](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/436))
+* `Catalog.QueryMediaList` method was not working because `fmt.Sprintf` was being misused ([#441](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/441))
 
 ## DEPRECATIONS
-* Deprecated `vm.DeleteMetadata` in favor of `vm.DeleteMetadataEntry` ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
-* Deprecated `vm.AddMetadata` in favor of `vm.AddMetadataEntry` ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
-* Deprecated `vdc.DeleteMetadata` in favor of `vdc.DeleteMetadataEntry` ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
-* Deprecated `vdc.AddMetadata` in favor of `vdc.AddMetadataEntry` ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
-* Deprecated `vdc.AddMetadataAsync` in favor of `vdc.AddMetadataEntryAsync` ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
-* Deprecated `vdc.DeleteMetadataAsync` in favor of `vdc.DeleteMetadataEntryAsync` ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
-* Deprecated `vApp.DeleteMetadata` in favor of `vApp.DeleteMetadataEntry` ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
-* Deprecated `vApp.AddMetadata` in favor of `vApp.AddMetadataEntry` ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
-* Deprecated `vAppTemplate.AddMetadata` in favor of `vAppTemplate.AddMetadataEntry` ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
-* Deprecated `vAppTemplate.AddMetadataAsync` in favor of `vAppTemplate.AddMetadataEntryAsync` ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
-* Deprecated `vAppTemplate.DeleteMetadata` in favor of `vAppTemplate.DeleteMetadataEntry` ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
-* Deprecated `vAppTemplate.DeleteMetadataAsync` in favor of `vAppTemplate.DeleteMetadataEntryAsync` ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
-* Deprecated `mediaRecord.AddMetadata` in favor of `mediaRecord.AddMetadataEntry` ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
-* Deprecated `mediaRecord.AddMetadataAsync` in favor of `mediaRecord.AddMetadataEntryAsync` ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
-* Deprecated `mediaRecord.DeleteMetadata` in favor of `mediaRecord.DeleteMetadataEntry` ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
-* Deprecated `mediaRecord.DeleteMetadataAsync` in favor of `mediaRecord.DeleteMetadataEntryAsync` ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
-* Deprecated `media.AddMetadata` in favor of `media.AddMetadataEntry` ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
-* Deprecated `media.AddMetadataAsync` in favor of `media.AddMetadataEntryAsync` ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
-* Deprecated `media.DeleteMetadata` in favor of `media.DeleteMetadataEntry` ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
-* Deprecated `media.DeleteMetadataAsync` in favor of `media.DeleteMetadataEntryAsync` ([#430](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/430))
-* Deprecated `vm.ChangeMemorySize` in favor of `vm.ChangeMemory` ([#432](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/432))
-* Deprecated `vm.ChangeCPUCount` and `vm.ChangeCPUCountWithCore` in favor of `vm.ChangeCPU` ([#432](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/432))
+* Deprecated `vm.DeleteMetadata` in favor of `vm.DeleteMetadataEntry` ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
+* Deprecated `vm.AddMetadata` in favor of `vm.AddMetadataEntry` ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
+* Deprecated `vdc.DeleteMetadata` in favor of `vdc.DeleteMetadataEntry` ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
+* Deprecated `vdc.AddMetadata` in favor of `vdc.AddMetadataEntry` ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
+* Deprecated `vdc.AddMetadataAsync` in favor of `vdc.AddMetadataEntryAsync` ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
+* Deprecated `vdc.DeleteMetadataAsync` in favor of `vdc.DeleteMetadataEntryAsync` ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
+* Deprecated `vApp.DeleteMetadata` in favor of `vApp.DeleteMetadataEntry` ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
+* Deprecated `vApp.AddMetadata` in favor of `vApp.AddMetadataEntry` ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
+* Deprecated `vAppTemplate.AddMetadata` in favor of `vAppTemplate.AddMetadataEntry` ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
+* Deprecated `vAppTemplate.AddMetadataAsync` in favor of `vAppTemplate.AddMetadataEntryAsync` ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
+* Deprecated `vAppTemplate.DeleteMetadata` in favor of `vAppTemplate.DeleteMetadataEntry` ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
+* Deprecated `vAppTemplate.DeleteMetadataAsync` in favor of `vAppTemplate.DeleteMetadataEntryAsync` ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
+* Deprecated `mediaRecord.AddMetadata` in favor of `mediaRecord.AddMetadataEntry` ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
+* Deprecated `mediaRecord.AddMetadataAsync` in favor of `mediaRecord.AddMetadataEntryAsync` ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
+* Deprecated `mediaRecord.DeleteMetadata` in favor of `mediaRecord.DeleteMetadataEntry` ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
+* Deprecated `mediaRecord.DeleteMetadataAsync` in favor of `mediaRecord.DeleteMetadataEntryAsync` ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
+* Deprecated `media.AddMetadata` in favor of `media.AddMetadataEntry` ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
+* Deprecated `media.AddMetadataAsync` in favor of `media.AddMetadataEntryAsync` ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
+* Deprecated `media.DeleteMetadata` in favor of `media.DeleteMetadataEntry` ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
+* Deprecated `media.DeleteMetadataAsync` in favor of `media.DeleteMetadataEntryAsync` ([#430](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/430))
+* Deprecated `vm.ChangeMemorySize` in favor of `vm.ChangeMemory` ([#432](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/432))
+* Deprecated `vm.ChangeCPUCount` and `vm.ChangeCPUCountWithCore` in favor of `vm.ChangeCPU` ([#432](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/432))
 
 ## NOTES
-* Bumped `staticcheck` version to 2022.1 with Go 1.18 support ([#457](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/457))
+* Bumped `staticcheck` version to 2022.1 with Go 1.18 support ([#457](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/457))
 
 ## 2.14.0 (January 7, 2022)
 
 ## FEATURES
 * Add type `NsxtAlbConfig` and functions `NsxtEdgeGateway.UpdateAlbSettings`, `NsxtEdgeGateway.GetAlbSettings`,
-  `NsxtEdgeGateway.DisableAlb` ([#403](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/403))
+  `NsxtEdgeGateway.DisableAlb` ([#403](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/403))
 * Add types `Certificate` and `types.CertificateLibraryItem` for handling Certificates in Certificate Library with corresponding
   methods `client.GetCertificateFromLibraryById`, `client.AddCertificateToLibrary`, `client.GetAllCertificatesFromLibrary`, `client.GetCertificateFromLibraryByName`, `adminOrg.GetCertificateFromLibraryById`, `adminOrg.AddCertificateToLibrary`, `adminOrg.GetAllCertificatesFromLibrary`, `adminOrg.GetCertificateFromLibraryByName`,
-  `certificate.Update`, `certificate.Delete` ([#404](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/404))
+  `certificate.Update`, `certificate.Delete` ([#404](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/404))
 * Add support for ALB Service Engine Group Assignment to NSX-T Edge Gateway via type
   `NsxtAlbServiceEngineGroupAssignment` and functions `GetAllAlbServiceEngineGroupAssignments`,
   `GetAlbServiceEngineGroupAssignmentById`, `GetAlbServiceEngineGroupAssignmentByName`,
-  `CreateAlbServiceEngineGroupAssignment`, `Update`, `Delete`  ([#405](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/405))
-* Add type `types.ApiTokenRefresh` to contain data from API token refresh ([#406](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/406))
-* Add method `VCDClient.GetBearerTokenFromApiToken` to get a bearer token from an API token ([#406](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/406))
-* Add method `VCDClient.SetApiToken` to set a token and get a bearer token using and API token and get token details in return ([#406](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/406))
+  `CreateAlbServiceEngineGroupAssignment`, `Update`, `Delete`  ([#405](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/405))
+* Add type `types.ApiTokenRefresh` to contain data from API token refresh ([#406](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/406))
+* Add method `VCDClient.GetBearerTokenFromApiToken` to get a bearer token from an API token ([#406](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/406))
+* Add method `VCDClient.SetApiToken` to set a token and get a bearer token using and API token and get token details in return ([#406](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/406))
 * Add types `VdcGroup`, `types.VdcGroup`, `types.ParticipatingOrgVdcs`, `types.CandidateVdc`, `types.DfwPolicies` and `types.DefaultPolicy` for handling VDC groups with corresponding
-  methods `adminOrg.CreateNsxtVdcGroup`, `adminOrg.CreateVdcGroup`, `adminOrg.GetAllNsxtVdcGroupCandidates`, `adminOrg.GetAllVdcGroupCandidates`, `adminOrg.GetAllVdcGroups`, `adminOrg.GetVdcGroupByName`, `adminOrg.GetVdcGroupById`, `vdcGroup.Update`, `vdcGroup.GenericUpdate`, `vdcGroup.Delete`, `vdcGroup.DisableDefaultPolicy`, `vdcGroup.EnableDefaultPolicy`, `vdcGroup.GetDfwPolicies`, `vdcGroup.DeActivateDfw`, `vdcGroup.ActivateDfw`, `vdcGroup.UpdateDefaultDfwPolicies`, `vdcGroup.UpdateDfwPolicies`  ([#410](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/410))
+  methods `adminOrg.CreateNsxtVdcGroup`, `adminOrg.CreateVdcGroup`, `adminOrg.GetAllNsxtVdcGroupCandidates`, `adminOrg.GetAllVdcGroupCandidates`, `adminOrg.GetAllVdcGroups`, `adminOrg.GetVdcGroupByName`, `adminOrg.GetVdcGroupById`, `vdcGroup.Update`, `vdcGroup.GenericUpdate`, `vdcGroup.Delete`, `vdcGroup.DisableDefaultPolicy`, `vdcGroup.EnableDefaultPolicy`, `vdcGroup.GetDfwPolicies`, `vdcGroup.DeActivateDfw`, `vdcGroup.ActivateDfw`, `vdcGroup.UpdateDefaultDfwPolicies`, `vdcGroup.UpdateDfwPolicies`  ([#410](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/410))
 * Add support for ALB Pool to NSX-T Edge Gateway via type `NsxtAlbPool` and functions `GetAllAlbPools`,
   `GetAllAlbPoolSummaries`, `GetAlbPoolByName`, `GetAlbPoolById`, `CreateNsxtAlbPool`, `nsxtAlbPool.Update`,
-  `nsxtAlbPool.Delete` ([#414](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/414))
+  `nsxtAlbPool.Delete` ([#414](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/414))
 * Add support for ALB Virtual Services to NSX-T Edge Gateway via type `NsxtAlbVirtualService` and functions `GetAllAlbVirtualServices`,
   `GetAllAlbGetAllAlbVirtualServiceSummaries`, `GetAlbVirtualServiceByName`, `GetAlbVirtualServiceById`,
-  `CreateNsxtAlbVirtualService`, `NsxtAlbVirtualService.Update`, `NsxtAlbVirtualService.Delete` ([#417](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/417))
+  `CreateNsxtAlbVirtualService`, `NsxtAlbVirtualService.Update`, `NsxtAlbVirtualService.Delete` ([#417](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/417))
 
 ## IMPROVEMENTS
-* `VCDClient.SetToken` has now the ability of transparently setting a bearer token when receiving an API token ([#406](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/406))
-* Remove Coverity warnings from code ([#408](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/408), [#412](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/412))
-* Add session info to go-vcloud-director-fptcloud logs ([#409](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/409))
-* Add type `types.UpdateLeaseSettingsSection` to handle vApp lease settings. ([#420](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/420))
-* Add methods `vApp.GetLease` and `vApp.RenewLease`, to query the state of the vApp lease and eventually modify it. ([#420](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/420))
-* Add `LeaseSettingsSection` to `types.VApp` structure. ([#420](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/420))
+* `VCDClient.SetToken` has now the ability of transparently setting a bearer token when receiving an API token ([#406](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/406))
+* Remove Coverity warnings from code ([#408](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/408), [#412](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/412))
+* Add session info to go-vcloud-director-fptcloud logs ([#409](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/409))
+* Add type `types.UpdateLeaseSettingsSection` to handle vApp lease settings. ([#420](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/420))
+* Add methods `vApp.GetLease` and `vApp.RenewLease`, to query the state of the vApp lease and eventually modify it. ([#420](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/420))
+* Add `LeaseSettingsSection` to `types.VApp` structure. ([#420](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/420))
 
 ## BUG FIXES
-* Fix Issue #728: `vm.UpdateInternalDisksAsync()` didn't send VM description and as a result would delete VM description ([#418](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/418))
-* Remove hardcoded 0 value for Weight field in `ChangeCPUCountWithCore` function to avoid overriding shares ([#419](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/419))
-* Fix issue #421 "Wrong xml name in SourcedVmTemplateParams" ([#420](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/420))
+* Fix Issue #728: `vm.UpdateInternalDisksAsync()` didn't send VM description and as a result would delete VM description ([#418](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/418))
+* Remove hardcoded 0 value for Weight field in `ChangeCPUCountWithCore` function to avoid overriding shares ([#419](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/419))
+* Fix issue #421 "Wrong xml name in SourcedVmTemplateParams" ([#420](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/420))
 
 
 ## 2.13.0 (September 30, 2021)
 
 ## FEATURES
-* Added method `AdminVdc.AddStorageProfile` ([#393](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/393))
-* Added method `AdminVdc.AddStorageProfileWait` ([#393](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/393))
-* Added method `AdminVdc.RemoveStorageProfile` ([#393](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/393))
-* Added method `AdminVdc.RemoveStorageProfileWait` ([#393](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/393))
-* Added method `AdminVdc.SetDefaultStorageProfile` ([#393](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/393))
-* Added method `AdminVdc.GetDefaultStorageProfileReference` ([#393](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/393))
-* Added method `VCDClient.GetStorageProfileByHref` ([#393](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/393))
-* Added method `Client.GetStorageProfileByHref` ([#393](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/393))
-* Added method `VCDClient.QueryProviderVdcStorageProfileByName` ([#393](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/393))
-* Added method `Client.QueryAllProviderVdcStorageProfiles` ([#393](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/393))
-* Added method `Client.QueryProviderVdcStorageProfiles` ([#393](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/393))
+* Added method `AdminVdc.AddStorageProfile` ([#393](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/393))
+* Added method `AdminVdc.AddStorageProfileWait` ([#393](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/393))
+* Added method `AdminVdc.RemoveStorageProfile` ([#393](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/393))
+* Added method `AdminVdc.RemoveStorageProfileWait` ([#393](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/393))
+* Added method `AdminVdc.SetDefaultStorageProfile` ([#393](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/393))
+* Added method `AdminVdc.GetDefaultStorageProfileReference` ([#393](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/393))
+* Added method `VCDClient.GetStorageProfileByHref` ([#393](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/393))
+* Added method `Client.GetStorageProfileByHref` ([#393](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/393))
+* Added method `VCDClient.QueryProviderVdcStorageProfileByName` ([#393](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/393))
+* Added method `Client.QueryAllProviderVdcStorageProfiles` ([#393](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/393))
+* Added method `Client.QueryProviderVdcStorageProfiles` ([#393](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/393))
 * Added types `NsxtAlbController` and `types.NsxtAlbController` for handling NSX-T ALB Controllers with corresponding
   functions `GetAllAlbControllers`, `GetAlbControllerByName`, `GetAlbControllerById`, `GetAlbControllerByUrl`,
-  `CreateNsxtAlbController`, `Update`, `Delete` ([#398](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/398))
+  `CreateNsxtAlbController`, `Update`, `Delete` ([#398](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/398))
 * Added types `NsxtAlbCloud` and `types.NsxtAlbCloud` for handling NSX-T ALB Clouds with corresponding functions
-  `GetAllAlbClouds`, `GetAlbCloudByName`, `GetAlbCloudById`, `CreateAlbCloud`, `Delete` ([#398](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/398))
+  `GetAllAlbClouds`, `GetAlbCloudByName`, `GetAlbCloudById`, `CreateAlbCloud`, `Delete` ([#398](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/398))
 * Added type `NsxtAlbImportableCloud` and `types.NsxtAlbImportableCloud` for listing NSX-T ALB Importable Clouds with
   corresponding functions `GetAllAlbImportableClouds`, `GetAlbImportableCloudByName`, `GetAlbImportableCloudById`
-  ([#398](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/398))
+  ([#398](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/398))
 * Added types `NsxtAlbServiceEngineGroup` and `types.NsxtAlbServiceEngineGroup` for handling NSX-T ALB Service Engine
   Groups with corresponding functions `GetAllNsxtAlbServiceEngineGroups`, `GetAlbServiceEngineGroupByName`,
-  `GetAlbServiceEngineGroupById`, `CreateNsxtAlbServiceEngineGroup`, `Update`, `Delete`, `Sync` ([#398](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/398))
+  `GetAlbServiceEngineGroupById`, `CreateNsxtAlbServiceEngineGroup`, `Update`, `Delete`, `Sync` ([#398](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/398))
 * Added types `NsxtAlbImportableServiceEngineGroups` and `types.NsxtAlbImportableServiceEngineGroups` for listing NSX-T
   ALB Importable Service Engine Groups with corresponding functions `GetAllAlbImportableServiceEngineGroups`,
-  `GetAlbImportableServiceEngineGroupByName`, `GetAlbImportableServiceEngineGroupById` ([#398](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/398))
+  `GetAlbImportableServiceEngineGroupByName`, `GetAlbImportableServiceEngineGroupById` ([#398](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/398))
 
 ## IMPROVEMENTS
 * External network type ExternalNetworkV2 automatically elevates API version to maximum available out of 33.0, 35.0 and
   36.0, so that new functionality can be consumed. It uses a controlled version elevation mechanism to consume the newer
   features, but at the same time remain tested by not choosing the latest untested version blindly (more information in
-  openapi_endpoints.go) ([#399](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/399))
-* Added new field BackingTypeValue in favor of deprecated BackingType to types.ExternalNetworkV2Backing ([#399](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/399))
-* Add new function `GetFilteredNsxtImportableSwitches` to query NSX-T Importable Switches (Segments) ([#399](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/399))
-* Add `.changes` directory for changelog items ([#391](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/391))
+  openapi_endpoints.go) ([#399](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/399))
+* Added new field BackingTypeValue in favor of deprecated BackingType to types.ExternalNetworkV2Backing ([#399](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/399))
+* Add new function `GetFilteredNsxtImportableSwitches` to query NSX-T Importable Switches (Segments) ([#399](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/399))
+* Add `.changes` directory for changelog items ([#391](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/391))
 
-* Align build tags to match go fmt with Go 1.17 ([#396](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/396))
-* Improve `test-tags.sh` script to handle new build tag format ([#396](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/396))
+* Align build tags to match go fmt with Go 1.17 ([#396](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/396))
+* Improve `test-tags.sh` script to handle new build tag format ([#396](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/396))
 
 ## BUG FIXES
-* Fix handling of `staticcheck` in GitGub Actions ([#391](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/391))
+* Fix handling of `staticcheck` in GitGub Actions ([#391](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/391))
 
-* Fix Issue #390: `catalog.Delete()` ignores returned task and responds immediately which could have caused failures ([#392](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/392))
+* Fix Issue #390: `catalog.Delete()` ignores returned task and responds immediately which could have caused failures ([#392](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/392))
 
-* Fixes Issue #395 "BUG: can't update EGW - there is no ownerRef field" ([#397](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/397))
+* Fixes Issue #395 "BUG: can't update EGW - there is no ownerRef field" ([#397](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/397))
 
 ## DEPRECATIONS
-* Deprecated `GetStorageProfileByHref`  in favor of either `client.GetStorageProfileByHref` or `vcdClient.GetStorageProfileByHref` ([#393](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/393))
-* Deprecated `QueryProviderVdcStorageProfileByName` in favor of `VCDClient.QueryProviderVdcStorageProfileByName` ([#393](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/393))
-* Deprecated `VCDClient.QueryProviderVdcStorageProfiles` in favor of either `client.QueryProviderVdcStorageProfiles` or `client.QueryAllProviderVdcStorageProfiles` ([#393](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/393))
-* Deprecated `Vdc.GetDefaultStorageProfileReference` in favor of `adminVdc.GetDefaultStorageProfileReference` ([#393](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/393))
+* Deprecated `GetStorageProfileByHref`  in favor of either `client.GetStorageProfileByHref` or `vcdClient.GetStorageProfileByHref` ([#393](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/393))
+* Deprecated `QueryProviderVdcStorageProfileByName` in favor of `VCDClient.QueryProviderVdcStorageProfileByName` ([#393](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/393))
+* Deprecated `VCDClient.QueryProviderVdcStorageProfiles` in favor of either `client.QueryProviderVdcStorageProfiles` or `client.QueryAllProviderVdcStorageProfiles` ([#393](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/393))
+* Deprecated `Vdc.GetDefaultStorageProfileReference` in favor of `adminVdc.GetDefaultStorageProfileReference` ([#393](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/393))
 
 ## 2.12.1 (July 5, 2021)
 
 BUGS FIXED:
 * org.GetCatalogByName and org.GetCatalogById could not retrieve shared catalogs from different Orgs 
-  [#389](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/389)
+  [#389](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/389)
 
 
 ## 2.12.0 (June 30, 2021)
 
 * Improved error handling and function receiver name in client
-  [#379](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/379)
-* Added method `vdc.QueryEdgeGateway` [#364](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/364)
-* Deprecated `vdc.GetEdgeGatewayRecordsType` [#364](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/364)
-* Dropped support for VCD 9.7 which is EOL now [#371](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/371)
-* Bumped Default API Version to V33.0  [#371](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/371)
+  [#379](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/379)
+* Added method `vdc.QueryEdgeGateway` [#364](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/364)
+* Deprecated `vdc.GetEdgeGatewayRecordsType` [#364](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/364)
+* Dropped support for VCD 9.7 which is EOL now [#371](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/371)
+* Bumped Default API Version to V33.0  [#371](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/371)
 * Methods `GetVDCById` and `GetVDCByName` for `Org` now use queries behind the scenes because Org 
-  structure does not list child VDCs anymore  [#371](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/371), 
-  [#376](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/376), [#382](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/382)
+  structure does not list child VDCs anymore  [#371](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/371), 
+  [#376](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/376), [#382](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/382)
 * Methods `GetCatalogById` and `GetCatalogByName` for `Org`  now use queries behind the scenes because Org
-  structure does not list child Catalogs anymore  [#371](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/371), 
-  [#376](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/376)
+  structure does not list child Catalogs anymore  [#371](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/371), 
+  [#376](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/376)
 * Drop legacy authentication mechanism (vcdAuthorize) and use only new Cloud API provided (vcdCloudApiAuthorize) as
-  API V33.0 is sufficient for it [#371](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/371)
+  API V33.0 is sufficient for it [#371](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/371)
 * Added NSX-T Firewall Group type (which represents a Security Group or an IP Set) support by using
   structures `NsxtFirewallGroup` and `NsxtFirewallGroupMemberVms`. The following methods are
   introduced for managing Security Groups and Ip Sets: `Vdc.CreateNsxtFirewallGroup`,
@@ -295,111 +295,111 @@ BUGS FIXED:
   `NsxtEdgeGateway.GetNsxtFirewallGroupById`, `NsxtFirewallGroup.Update`,
   `NsxtFirewallGroup.Delete`, `NsxtFirewallGroup.GetAssociatedVms`,
   `NsxtFirewallGroup.IsSecurityGroup`, `NsxtFirewallGroup.IsIpSet`
-  [#368](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/368)
+  [#368](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/368)
 * Added methods Org.QueryVmList and Org.QueryVmById to find VM by ID in an Org
-  [#368](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/368)
+  [#368](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/368)
 * Added `NsxtAppPortProfile` and `types.NsxtAppPortProfile` for NSX-T Application Port Profile management 
-  [#378](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/378)  
-* Deprecated methods `vdc.ComposeRawVApp` and `vdc.ComposeVApp` [#387](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/387)
-* Added method `vdc.CreateRawVApp` [#387](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/387)
+  [#378](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/378)  
+* Deprecated methods `vdc.ComposeRawVApp` and `vdc.ComposeVApp` [#387](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/387)
+* Added method `vdc.CreateRawVApp` [#387](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/387)
 * Removed deprecated method `adminOrg.GetRole`  
 * Added Tenant Context management functions `Client.RemoveCustomHeader`, `Client.SetCustomHeader`, `WithHttpHeader`, 
   and many private methods to retrieve tenant context down the hierarchy. More details in `CODING_GUIDELINES.md`
-  [#380](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/380)
+  [#380](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/380)
 * Added Rights management methods `AdminOrg.GetAllRights`, `AdminOrg.GetAllRightsCategories`, `AdminOrg.GetRightById`, 
   `AdminOrg.GetRightByName`, `Client.GetAllRights`, `Client.GetAllRightsCategories`, `Client.GetRightById`, 
-  `Client.GetRightByName`, `client.GetRightsCategoryById`, `AdminOrg.GetRightsCategoryById` [#380](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/380)
+  `Client.GetRightByName`, `client.GetRightsCategoryById`, `AdminOrg.GetRightsCategoryById` [#380](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/380)
 * Added Global Role management methods `Client.GetAllGlobalRoles`, `Client.CreateGlobalRole`, `Client.GetGlobalRoleById`,
   `Client.GetGlobalRoleByName`, `GlobalRole.AddRights`, `GlobalRole.Delete`, `GlobalRole.GetRights`,
   `GlobalRole.GetTenants`, `GlobalRole.PublishAllTenants`, `GlobalRole.PublishTenants`, `GlobalRole.RemoveAllRights`,
   `GlobalRole.RemoveRights`, `GlobalRole.ReplacePublishedTenants`, `GlobalRole.UnpublishAllTenants`, 
-  `GlobalRole.UnpublishTenants`, `GlobalRole.Update`, `GlobalRole.UpdateRights` [#380](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/380)
+  `GlobalRole.UnpublishTenants`, `GlobalRole.Update`, `GlobalRole.UpdateRights` [#380](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/380)
 * Added Rights Bundle management methods `Client.CreateRightsBundle`, `Client.GetAllRightsBundles`, 
   `Client.GetRightsBundleById`, `Client.GetRightsBundleByName`, `RightsBundle.AddRights`, `RightsBundle.Delete`, 
   `RightsBundle.GetRights`, `RightsBundle.GetTenants`, `RightsBundle.PublishAllTenants`, `RightsBundle.PublishTenants`, 
   `RightsBundle.RemoveAllRights`, `RightsBundle.RemoveRights`, `RightsBundle.ReplacePublishedTenants`, 
   `RightsBundle.UnpublishAllTenants`, `RightsBundle.UnpublishTenants`, `RightsBundle.Update`, `RightsBundle.UpdateRights`
-  [#380](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/380)
+  [#380](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/380)
 * Added Role managemnt methods `AdminOrg.GetAllRoles`, `AdminOrg.GetRoleById`, `AdminOrg.GetRoleByName`, 
   `Client.GetAllRoles`, `Role.AddRights`, `Role.GetRights`, `Role.RemoveAllRights`, `Role.RemoveRights`, `Role.UpdateRights`
-  [#380](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/380)
-* Added convenience function `FindMissingImpliedRights` [#380](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/380)
+  [#380](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/380)
+* Added convenience function `FindMissingImpliedRights` [#380](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/380)
 * Added methods `NsxtEdgeGateway.UpdateNsxtFirewall()`, `NsxtEdgeGateway.GetNsxtFirewall()`, `nsxtFirewall.DeleteAllRules()`,
-  `nsxtFirewall.DeleteRuleById` [#381](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/381)
+  `nsxtFirewall.DeleteRuleById` [#381](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/381)
 * Added NSX-T NAT support with types `NsxtNatRule` and `types.NsxtNatRule` as well as methods `edge.GetAllNsxtNatRules`,
   `edge.GetNsxtNatRuleByName`, `edge.GetNsxtNatRuleById`, `edge.CreateNatRule`, `nsxtNatRule.Update`, `nsxtNatRule.Delete`,
-  `nsxtNatRule.IsEqualTo` [#382](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/382)
+  `nsxtNatRule.IsEqualTo` [#382](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/382)
 * Added `NsxtIpSecVpnTunnel` and `types.NsxtIpSecVpnTunnel` for NSX-T IPsec VPN Tunnel configuration
-  [#385](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/385)
+  [#385](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/385)
 
 BREAKING CHANGES:
-* Added parameter `description` to method `vdc.ComposeRawVapp` [#372](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/372)
-* Added methods `vapp.Rename`, `vapp.UpdateDescription`, `vapp.UpdateNameDescription` [#372](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/372)
+* Added parameter `description` to method `vdc.ComposeRawVapp` [#372](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/372)
+* Added methods `vapp.Rename`, `vapp.UpdateDescription`, `vapp.UpdateNameDescription` [#372](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/372)
 * Field `types.Disk.Size` is replaced with `types.Disk.SizeMb` as size in Kilobytes is not supported in V33.0
-  [#371](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/371)
+  [#371](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/371)
 * Field `types.DiskRecordType.SizeB` is replaced with `types.DiskRecordType.SizeMb` as size in Kilobytes is not
-  supported in V33.0 [#371](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/371)
+  supported in V33.0 [#371](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/371)
 * Added parameter `additionalHeader map[string]string` to functions `Client.OpenApiDeleteItem`, `Client.OpenApiGetAllItems`,
   `Client.OpenApiGetItem`, `Client.OpenApiPostItem`, `Client.OpenApiPutItem`, `Client.OpenApiPutItemAsync`,
-  `Client.OpenApiPutItemSync` [#380](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/380)
+  `Client.OpenApiPutItemSync` [#380](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/380)
 * Renamed functions `GetOpenApiRoleById` -> `GetRoleById`, `GetOpenApiRoleByName` -> `GetRoleByName`, 
-  `GetAllOpenApiRoles` -> `GetAllRoles` [#380](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/380)
+  `GetAllOpenApiRoles` -> `GetAllRoles` [#380](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/380)
 
 IMPROVEMENTS:
 * Only send xml.Header when payload is not empty (some WAFs block empty requests with XML header) 
-  [#367](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/367)
+  [#367](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/367)
 * Improved test entity cleanup to find standalone VMs in any VDC (not only default NSX-V one)
-  [#368](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/368)
+  [#368](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/368)
 * Improved test entity cleanup to allow specifying parent VDC for vApp removals
-  [#368](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/368)
+  [#368](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/368)
 * Cleanup a few unnecessary type conversions detected by new staticcheck version 
-  [#381](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/381)
+  [#381](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/381)
 * Improved `OpenApiGetAllItems` to still follow pages in VCD endpoints with BUG which don't return 'nextPage' link for
-  pagination [#378](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/378)
+  pagination [#378](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/378)
 * Improved LDAP container related tests to use correct port mapping for latest LDAP container version 
-  [#378](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/378)
+  [#378](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/378)
 
 
 ## 2.11.0 (March 10, 2021)
 
 * Added structure and methods to handle Org VDC networks using OpenAPI - `OpenApiOrgVdcNetwork`. It supports VCD 9.7+
-for all networks types for NSX-V and NSX-T backed VDCs [#354](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/354)
+for all networks types for NSX-V and NSX-T backed VDCs [#354](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/354)
 * Added `NsxtImportableSwitch` structure with `GetNsxtImportableSwitchByName` and `GetAllNsxtImportableSwitches` to 
-lookup NSX-T segments for use in NSX-T Imported networks [#354](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/354)
-* Added `vdc.IsNsxt` and `vdc.IsNsxv` methods to verify if VDC is backed by NSX-T or NSX-V [#354](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/354)
-* Added types `types.CreateVmParams` and `types.InstantiateVmTemplateParams`  [#356](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/356)
+lookup NSX-T segments for use in NSX-T Imported networks [#354](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/354)
+* Added `vdc.IsNsxt` and `vdc.IsNsxv` methods to verify if VDC is backed by NSX-T or NSX-V [#354](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/354)
+* Added types `types.CreateVmParams` and `types.InstantiateVmTemplateParams`  [#356](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/356)
 * Added VDC methods `CreateStandaloneVMFromTemplate`, `CreateStandaloneVMFromTemplateAsync` `CreateStandaloneVm`, 
-`CreateStandaloneVmAsync` [#356](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/356)
-* Added VDC methods `QueryVmByName`, `QueryVmById`, `QueryVmList` [#356](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/356)
-* Added VM methods `Delete`, `DeleteAsync` [#356](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/356)
+`CreateStandaloneVmAsync` [#356](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/356)
+* Added VDC methods `QueryVmByName`, `QueryVmById`, `QueryVmList` [#356](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/356)
+* Added VM methods `Delete`, `DeleteAsync` [#356](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/356)
 * Added VDC methods `GetOpenApiOrgVdcNetworkDhcp`, `UpdateOpenApiOrgVdcNetworkDhcp` and `DeleteOpenApiOrgVdcNetworkDhcp`
-for OpenAPI management of Org Network DHCP configurations [#357](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/357)
+for OpenAPI management of Org Network DHCP configurations [#357](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/357)
 
 BREAKING CHANGES:
 * Renamed `types.VM` to `types.Vm` to facilitate implementation of standalone VM 
-[#356](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/356)
+[#356](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/356)
 
 BUGS FIXED:
-* Converted IPAddress field for IPAddresses struct to array [#350](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/350)
+* Converted IPAddress field for IPAddresses struct to array [#350](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/350)
 
 IMPROVEMENTS:
-* Added generic OpenAPI entity cleanup for tests [348](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/348)
+* Added generic OpenAPI entity cleanup for tests [348](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/348)
 
 ## 2.10.0 (December 18, 2020)
 
-* Added functions to retrieve and use VCD version `client.GetVcdVersion`, `client.GetVcdShortVersion`, `client.GetVcdFullVersion`, `client.VersionEqualOrGreater` [#339](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/339)
-* Added methods `VM.UpdateStorageProfile`, `VM.UpdateStorageProfileAsync` [#338](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/338)
-* Added methods `adminVdc.UpdateStorageProfile` [#340](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/340)
-* Added transparent support for bearer tokens [#341](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/341)
+* Added functions to retrieve and use VCD version `client.GetVcdVersion`, `client.GetVcdShortVersion`, `client.GetVcdFullVersion`, `client.VersionEqualOrGreater` [#339](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/339)
+* Added methods `VM.UpdateStorageProfile`, `VM.UpdateStorageProfileAsync` [#338](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/338)
+* Added methods `adminVdc.UpdateStorageProfile` [#340](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/340)
+* Added transparent support for bearer tokens [#341](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/341)
 * Added transparent connection using `cloudapi/1.0.0/sessions` when access through `api/sessions` is disabled
 * Added functions `edge.GetLbAppRules`, `edge.GetLbServerPools`, `edge.GetLbAppProfiles`, `edge.GetNsxvNatRules`, `client.GetOrgList`
 * Exported private function `client.maxSupportedVersion` to `client.MaxSupportedVersion`
-* Able to upload an OVF without ovf:size defined in File part. Some bug fix for uploading OVA/OVF. [#331](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/331)
+* Able to upload an OVF without ovf:size defined in File part. Some bug fix for uploading OVA/OVF. [#331](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/331)
 * Add support for handling catalog storage profile (`adminOrg.CreateCatalogWithStorageProfile`,
-`org.CreateCatalogWithStorageProfile`, `adminCatalog.Update`) [#345](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/345)
-* Add convenience functions `AdminOrg.GetAllStorageProfileReferences`, `AdminOrg.GetStorageProfileReferenceById`, `AdminOrg.GetAllVDCs` [#345](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/345)
-* Added VCD 10.1+ functions `(vdc *Vdc) GetNsxtEdgeClusterByName` and `(vdc *Vdc) GetAllNsxtEdgeClusters` for NSX-T Edge Cluster lookup [#344](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/344)
-* Added VCD 10.1+ NSX-T Edge Gateway management functions `GetNsxtEdgeGatewayById`, `GetNsxtEdgeGatewayByName`, `GetAllNsxtEdgeGateways`, `CreateNsxtEdgeGateway`, `Update`, `Delete` [#344](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/344)
+`org.CreateCatalogWithStorageProfile`, `adminCatalog.Update`) [#345](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/345)
+* Add convenience functions `AdminOrg.GetAllStorageProfileReferences`, `AdminOrg.GetStorageProfileReferenceById`, `AdminOrg.GetAllVDCs` [#345](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/345)
+* Added VCD 10.1+ functions `(vdc *Vdc) GetNsxtEdgeClusterByName` and `(vdc *Vdc) GetAllNsxtEdgeClusters` for NSX-T Edge Cluster lookup [#344](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/344)
+* Added VCD 10.1+ NSX-T Edge Gateway management functions `GetNsxtEdgeGatewayById`, `GetNsxtEdgeGatewayByName`, `GetAllNsxtEdgeGateways`, `CreateNsxtEdgeGateway`, `Update`, `Delete` [#344](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/344)
 
 BREAKING CHANGES:
 
@@ -407,110 +407,110 @@ BREAKING CHANGES:
 
 ## 2.9.0 (October 15, 2020)
 
-* Improved testing tags isolation [#320](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/320)
-* Added command `make tagverify` to check tags isolation tests [#320](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/320)
-* Added methods `Client.GetAccessControl`, `Client.SetAccessControl`[#329](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/329)
-* Added methods `VApp.GetAccessControl`, `VApp.SetAccessControl`, `VApp.RemoveAccessControl`, `VApp.IsShared` [#329](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/329)
-* Added methods `AdminCatalog.GetAccessControl`, `AdminCatalog.SetAccessControl`, `AdminCatalog.RemoveAccessControl`, `AdminCatalog.IsShared` [#329](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/329)
-* Added methods `Catalog.GetAccessControl`, `Catalog.SetAccessControl`, `Catalog.RemoveAccessControl`, `Catalog.IsShared` [#329](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/329)
-* Added methods `Vdc.GetVappAccessControl`, `AdminOrg.GetCatalogAccessControl`, `Org.GetCatalogAccessControl` [#329](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/329)
-* Added methods `Vdc.QueryVappList`, `Vdc.GetVappList`, `AdminVdc.GetVappList`, `client.GetQueryType` [#329](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/329)
-* Added VM and vApp to search query engine [#329](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/329)
-* Added tenant context for access control methods [#329](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/329)
+* Improved testing tags isolation [#320](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/320)
+* Added command `make tagverify` to check tags isolation tests [#320](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/320)
+* Added methods `Client.GetAccessControl`, `Client.SetAccessControl`[#329](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/329)
+* Added methods `VApp.GetAccessControl`, `VApp.SetAccessControl`, `VApp.RemoveAccessControl`, `VApp.IsShared` [#329](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/329)
+* Added methods `AdminCatalog.GetAccessControl`, `AdminCatalog.SetAccessControl`, `AdminCatalog.RemoveAccessControl`, `AdminCatalog.IsShared` [#329](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/329)
+* Added methods `Catalog.GetAccessControl`, `Catalog.SetAccessControl`, `Catalog.RemoveAccessControl`, `Catalog.IsShared` [#329](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/329)
+* Added methods `Vdc.GetVappAccessControl`, `AdminOrg.GetCatalogAccessControl`, `Org.GetCatalogAccessControl` [#329](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/329)
+* Added methods `Vdc.QueryVappList`, `Vdc.GetVappList`, `AdminVdc.GetVappList`, `client.GetQueryType` [#329](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/329)
+* Added VM and vApp to search query engine [#329](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/329)
+* Added tenant context for access control methods [#329](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/329)
 * Loosen up `Test_LBAppRule` for invalid application script check to work with different error engine in VCD 10.2
-[#326](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/326)
-* Update VDC dynamic func to handle API version 35.0 [#327](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/327)
-* Added methods `vm.UpdateVmCpuAndMemoryHotAdd` and `vm.UpdateVmCpuAndMemoryHotAddAsyc` [#324](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/324)
+[#326](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/326)
+* Update VDC dynamic func to handle API version 35.0 [#327](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/327)
+* Added methods `vm.UpdateVmCpuAndMemoryHotAdd` and `vm.UpdateVmCpuAndMemoryHotAddAsyc` [#324](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/324)
 * Introduce low level OpenAPI client functions `OpenApiGetAllItems`,`OpenApiPostItemSync`,`OpenApiPostItemAsync`,
 `OpenApiPostItem`, `OpenApiGetItem`, `OpenApiPutItem`, `OpenApiPutItemSync`, `OpenApiPutItemAsync`,
 `OpenApiDeleteItem`, `OpenApiIsSupported`, `OpenApiBuildEndpoints`
-[#325](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/325), [#333](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/333)
-* Add OVF file upload support in UploadOvf function besides OVA. The input should be OVF file path inside the OVF folder. It will check if input file is XML content type, if yes, skip some OVA steps (like unpacking), if not, keep the old logic. [#323](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/323)
-* Dropped support for xuanson2406 Cloud Director 9.5 [#330](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/330)
-* Deprecated Vdc.UploadMediaImage because it no longer works with API V32.0+ [#330](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/330)
-* Add methods `vapp.AddNewVMWithComputePolicy`, `org.GetVdcComputePolicyById`, `adminOrg.GetVdcComputePolicyById`, `org.GetAllVdcComputePolicies`, `adminOrg.GetAllVdcComputePolicies`, `adminOrg.CreateVdcComputePolicy`, `vdcComputePolicy.Update`, `vdcComputePolicy.Delete`, `adminVdc.GetAllAssignedVdcComputePolicies` and `adminVdc.SetAssignedComputePolicies` [#334] (https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/334)
-* Introduce NSX-T support for adminOrg.CreateOrgVdc() [#332](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/332)
+[#325](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/325), [#333](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/333)
+* Add OVF file upload support in UploadOvf function besides OVA. The input should be OVF file path inside the OVF folder. It will check if input file is XML content type, if yes, skip some OVA steps (like unpacking), if not, keep the old logic. [#323](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/323)
+* Dropped support for VMware Cloud Director 9.5 [#330](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/330)
+* Deprecated Vdc.UploadMediaImage because it no longer works with API V32.0+ [#330](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/330)
+* Add methods `vapp.AddNewVMWithComputePolicy`, `org.GetVdcComputePolicyById`, `adminOrg.GetVdcComputePolicyById`, `org.GetAllVdcComputePolicies`, `adminOrg.GetAllVdcComputePolicies`, `adminOrg.CreateVdcComputePolicy`, `vdcComputePolicy.Update`, `vdcComputePolicy.Delete`, `adminVdc.GetAllAssignedVdcComputePolicies` and `adminVdc.SetAssignedComputePolicies` [#334] (https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/334)
+* Introduce NSX-T support for adminOrg.CreateOrgVdc() [#332](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/332)
 * Introduce NSX-T support for external network using OpenAPI endpoint and `ExternalNetworkV2` type methods including `CreateExternalNetworkV2`, 
-`GetExternalNetworkById`, `GetAllExternalNetworks`, `ExternalNetworkV2.Update`, and `ExternalNetworkV2.DELETE` [#335](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/335)
-* Introduce NSX-T Query functions `client.QueryNsxtManagerByName` and `client.GetImportableNsxtTier0RouterByName` [#335](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/335)
+`GetExternalNetworkById`, `GetAllExternalNetworks`, `ExternalNetworkV2.Update`, and `ExternalNetworkV2.DELETE` [#335](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/335)
+* Introduce NSX-T Query functions `client.QueryNsxtManagerByName` and `client.GetImportableNsxtTier0RouterByName` [#335](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/335)
 * Add HTTP User-Agent header `go-vcloud-director-fptcloud` to all API calls and allow to customize it using
-  `WithHttpUserAgent` configuration options function [#336](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/336)
+  `WithHttpUserAgent` configuration options function [#336](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/336)
 
 ## 2.8.0 (June 30, 2020)
 
-* Changed signature for `FindAdminCatalogRecords`, which now returns normalized type `[]*types.CatalogRecord` [#298](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/298)
-* Added methods `catalog.QueryVappTemplateList`, `catalog.QueryCatalogItemList`, `client.queryWithMetadataFields`, `client.queryByMetadataFilter` [#298](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/298)
-* Added query engine based on `client.SearchByFilter`, type `FilterDef`, and interface `QueryItem` [#298](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/298)
-* Added methods `adminOrg.QueryCatalogList` and `org.QueryCatalogList` [#298](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/298)
+* Changed signature for `FindAdminCatalogRecords`, which now returns normalized type `[]*types.CatalogRecord` [#298](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/298)
+* Added methods `catalog.QueryVappTemplateList`, `catalog.QueryCatalogItemList`, `client.queryWithMetadataFields`, `client.queryByMetadataFilter` [#298](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/298)
+* Added query engine based on `client.SearchByFilter`, type `FilterDef`, and interface `QueryItem` [#298](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/298)
+* Added methods `adminOrg.QueryCatalogList` and `org.QueryCatalogList` [#298](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/298)
 * Removed code that handled specific cases for API 29.0 and 30.0. This library now supports VCD versions from 9.5 to 10.1 included.
 * Added `vdc.QueryVappVmTemplate` and changed `vapp.AddNewVMWithStorageProfile` to allow creating VM from VM template.
-* Enhanced tests command line with flags that can be used instead of environment variables. [#305](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/305)
-* Improve logging security of debug output for API requests and responses [#306](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/306)
+* Enhanced tests command line with flags that can be used instead of environment variables. [#305](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/305)
+* Improve logging security of debug output for API requests and responses [#306](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/306)
 * Append log files by default instead of overwriting. `GOVCD_LOG_OVERWRITE=true` environment
   variable can set to overwrite log file on every initialization
-  [#307](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/307)
+  [#307](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/307)
 * Add configuration option `WithSamlAdfs` to `NewVCDClient()` to support SAML authentication using
   Active Directory Federations Services (ADFS) as IdP using WS-TRUST auth endpoint
   "/adfs/services/trust/13/usernamemixed"
-  [#304](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/304)
+  [#304](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/304)
 * Implemented VM affinity rules CRUD: `vdc.CreateVmAffinityRuleAsync`, `vdc. CreateVmAffinityRule`, `vdc.GetAllVmAffinityRuleList`, `vdc.GetVmAffinityRuleList`, `vdc.GetVmAntiAffinityRuleList`
  `vdc.GetVmAffinityRuleByHref`, `vdc.GetVmAffinityRulesByName`, `vdc.GetVmAffinityRuleById`, `vdc.GetVmAffinityRuleByNameOrId`, `VmAffinityRule.Delete`, `VmAffinityRule.Update`,
- `VmAffinityRule.SetMandatory`, `VmAffinityRule.SetEnabled`, `VmAffinityRule.Refresh` [#313](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/313)
-* Add method `client.QueryVmList` [#313](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/313)
+ `VmAffinityRule.SetMandatory`, `VmAffinityRule.SetEnabled`, `VmAffinityRule.Refresh` [#313](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/313)
+* Add method `client.QueryVmList` [#313](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/313)
 * Add support for group management using `CreateGroup`, `GetGroupByHref`, `GetGroupById`,
-  `GetGroupByName`, `GetGroupByNameOrId`, `Delete`, `Update`, `NewGroup` functions [#314](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/314)
-* Add LDAP administration functions for Org `LdapConfigure`, `GetLdapConfiguration`, and `LdapDisable` [#314](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/314)
-* Added methods `vapp.UpdateNetworkFirewallRules`, `vapp.UpdateNetworkFirewallRulesAsync`, `vapp.GetVappNetworkById`, `vapp.GetVappNetworkByName` and `vapp.GetVappNetworkByNameOrId` [#308](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/308)
-* Added methods `vapp.UpdateNetworkNatRulesAsync`, `vapp.UpdateNetworkNatRulesAsync`, `vapp.RemoveAllNetworkFirewallRules` and `vapp.RemoveAllNetworkNatRules` [#316](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/316)
-* Added methods `vapp.UpdateNetworkStaticRouting`, `vapp.UpdateNetworkStaticRoutingAsync` and `vapp.RemoveAllNetworkStaticRoutes` [#318](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/318)
+  `GetGroupByName`, `GetGroupByNameOrId`, `Delete`, `Update`, `NewGroup` functions [#314](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/314)
+* Add LDAP administration functions for Org `LdapConfigure`, `GetLdapConfiguration`, and `LdapDisable` [#314](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/314)
+* Added methods `vapp.UpdateNetworkFirewallRules`, `vapp.UpdateNetworkFirewallRulesAsync`, `vapp.GetVappNetworkById`, `vapp.GetVappNetworkByName` and `vapp.GetVappNetworkByNameOrId` [#308](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/308)
+* Added methods `vapp.UpdateNetworkNatRulesAsync`, `vapp.UpdateNetworkNatRulesAsync`, `vapp.RemoveAllNetworkFirewallRules` and `vapp.RemoveAllNetworkNatRules` [#316](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/316)
+* Added methods `vapp.UpdateNetworkStaticRouting`, `vapp.UpdateNetworkStaticRoutingAsync` and `vapp.RemoveAllNetworkStaticRoutes` [#318](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/318)
 
 ## 2.7.0 (April 10,2020)
 
-* Added methods `OrgVdcNetwork.Update`, `OrgVdcNetwork.UpdateAsync`, and `OrgVdcNetwork.Rename` [#292](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/292)
-* Added methods `EdgeGateway.Update` and `EdgeGateway.UpdateAsync` [#292](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/292)
+* Added methods `OrgVdcNetwork.Update`, `OrgVdcNetwork.UpdateAsync`, and `OrgVdcNetwork.Rename` [#292](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/292)
+* Added methods `EdgeGateway.Update` and `EdgeGateway.UpdateAsync` [#292](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/292)
 * Increment vCD API version used from 29.0 to 31.0
     * Add fields `AdminVdc.UniversalNetworkPoolReference and VM.Media`    
-* Added methods `vapp.AddEmptyVm`, `vapp.AddEmptyVmAsync` and `vdc.QueryAllMedia` [#296](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/296)
+* Added methods `vapp.AddEmptyVm`, `vapp.AddEmptyVmAsync` and `vdc.QueryAllMedia` [#296](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/296)
 
 NOTES:
 
 * Improved test in function `deleteVapp()` to avoid deletion errors during test suite run
-  [#297](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/297)
+  [#297](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/297)
 
 BUGS FIXED:
-* Fix issue in Queries with vCD 10 version, which do not return network pool or provider VDC[#293](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/293)
-* Session timeout for media, catalog item upload  [#294](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/294)
+* Fix issue in Queries with vCD 10 version, which do not return network pool or provider VDC[#293](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/293)
+* Session timeout for media, catalog item upload  [#294](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/294)
 * Fix `vapp.RemoveNetwork`, `vapp.RemoveNetworkAsync` to use `DELETE` API call instead of update
-  which can apply incorrect remaining vApp network configurations [#299](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/299)
+  which can apply incorrect remaining vApp network configurations [#299](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/299)
 
 ## 2.6.0 (March 13, 2020)
 
-* Moved `VCDClient.supportedVersions` to `VCDClient.Client.supportedVersions` [#274](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/274)    
-* Added methods `VM.AddInternalDisk`, `VM.GetInternalDiskById`, `VM.DeleteInternalDisk`, `VM.UpdateInternalDisks` and `VM.UpdateInternalDisksAsync` [#272](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/272)
-* Added methods `vdc.GetEdgeGatewayReferenceList` and `catalog.GetVappTemplateByHref` [#278](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/278)
-* Improved functions to not expect XML namespaces provided in argument structure [#284](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/284)
+* Moved `VCDClient.supportedVersions` to `VCDClient.Client.supportedVersions` [#274](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/274)    
+* Added methods `VM.AddInternalDisk`, `VM.GetInternalDiskById`, `VM.DeleteInternalDisk`, `VM.UpdateInternalDisks` and `VM.UpdateInternalDisksAsync` [#272](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/272)
+* Added methods `vdc.GetEdgeGatewayReferenceList` and `catalog.GetVappTemplateByHref` [#278](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/278)
+* Improved functions to not expect XML namespaces provided in argument structure [#284](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/284)
 * Change `int` and `bool` fields from types.VAppTemplateLeaseSettings and VAppLeaseSettings into pointers
 * Added method `catalog.GetVappTemplateByHref`, and expose methods `vdc.GetEdgeGatewayByHref` and `vdc.GetEdgeGatewayRecordsType`
-* Added methods `adminOrg.CreateOrgVdc`, `adminOrg.CreateOrgVdcAsync` and improved existing to support Flex VDC model. These new methods are dynamic as they change invocation behind the scenes based on vCD version [#285](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/285) 
-* Deprecated functions `adminOrg.CreateVdc` and `adminOrg.CreateVdcWait` [#285](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/285)
+* Added methods `adminOrg.CreateOrgVdc`, `adminOrg.CreateOrgVdcAsync` and improved existing to support Flex VDC model. These new methods are dynamic as they change invocation behind the scenes based on vCD version [#285](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/285) 
+* Deprecated functions `adminOrg.CreateVdc` and `adminOrg.CreateVdcWait` [#285](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/285)
 * Added methods `EdgeGateway.GetAllNsxvDhcpLeases()`, `EdgeGateway.GetNsxvActiveDhcpLeaseByMac()`
   `VM.WaitForDhcpIpByNicIndexes()`, `VM.GetParentVApp()`, `VM.GetParentVdc()`
-  [#283](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/283)
-* `types.GetGuestCustomizationSection` now uses pointers for all bool values to distinguish between empty and false value [#291](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/291)
-* Deprecated functions `Vapp.Customize()` and `VM.Customize()` in favor of `vm.SetGuestCustomizationSection` [#291](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/291)
-* Added methods `vapp.AddNetwork`, `vapp.AddNetworkAsync`, `vapp.AddOrgNetwork`, `vapp.AddOrgNetworkAsync`, `vapp.UpdateNetwork`, `vapp.UpdateNetworkAsync`, `vapp.UpdateOrgNetwork`, `vapp.UpdateOrgNetworkAsync`, `vapp.RemoveNetwork`, `vapp.RemoveNetworkAsync` and `GetUuidFromHref` [#289](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/290)
-* Deprecated functions `vapp.RemoveIsolatedNetwork`, `vapp.AddRAWNetworkConfig` and `vapp.AddIsolatedNetwork`  [#289](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/290)
+  [#283](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/283)
+* `types.GetGuestCustomizationSection` now uses pointers for all bool values to distinguish between empty and false value [#291](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/291)
+* Deprecated functions `Vapp.Customize()` and `VM.Customize()` in favor of `vm.SetGuestCustomizationSection` [#291](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/291)
+* Added methods `vapp.AddNetwork`, `vapp.AddNetworkAsync`, `vapp.AddOrgNetwork`, `vapp.AddOrgNetworkAsync`, `vapp.UpdateNetwork`, `vapp.UpdateNetworkAsync`, `vapp.UpdateOrgNetwork`, `vapp.UpdateOrgNetworkAsync`, `vapp.RemoveNetwork`, `vapp.RemoveNetworkAsync` and `GetUuidFromHref` [#289](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/290)
+* Deprecated functions `vapp.RemoveIsolatedNetwork`, `vapp.AddRAWNetworkConfig` and `vapp.AddIsolatedNetwork`  [#289](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/290)
 
 BUGS FIXED:
-* A data race in catalog/media item upload status reporting [#288](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/288)
-* `Vapp.Customize()` and `VM.Customize()` ignores `changeSid` value and always set it to true [#291](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/291)
+* A data race in catalog/media item upload status reporting [#288](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/288)
+* `Vapp.Customize()` and `VM.Customize()` ignores `changeSid` value and always set it to true [#291](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/291)
 
 ## 2.5.1 (December 12, 2019)
 
 BUGS FIXED:
 * Fix a bug where functions `GetAnyVnicIndexByNetworkName` and `GetVnicIndexByNetworkNameAndType`
   would not find vNic index when user is authenticated as org admin (not sysadmin)
-  [#275](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/275)
+  [#275](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/275)
 
 ## 2.5.0 (December 11, 2019)
 
@@ -530,29 +530,29 @@ BUGS FIXED:
     * Change to pointers `DistributedRoutingEnabled` in `GatewayConfiguration` and
     `DistributedInterface` in `NetworkConfiguration`
 * Add new field to type `GatewayConfiguration`: `FipsModeEnabled` -
-  [#267](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/267)
+  [#267](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/267)
 * Change bool to bool pointer for fields in type `GatewayConfiguration`: `HaEnabled`,
   `UseDefaultRouteForDNSRelay`, `AdvancedNetworkingEnabled` -
-  [#267](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/267)
-* Added method `EdgeGateway.GetLbVirtualServers` that gets all virtual servers configured on NSX load balancer. [#266](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/266)
-* Added method `EdgeGateway.GetLbServerPools` that gets all pools configured on NSX load balancer. [#266](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/266)
-* Added method `EdgeGateway.GetLbServiceMonitors` that gets all service monitors configured on NSX load balancer. [#266](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/266)
+  [#267](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/267)
+* Added method `EdgeGateway.GetLbVirtualServers` that gets all virtual servers configured on NSX load balancer. [#266](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/266)
+* Added method `EdgeGateway.GetLbServerPools` that gets all pools configured on NSX load balancer. [#266](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/266)
+* Added method `EdgeGateway.GetLbServiceMonitors` that gets all service monitors configured on NSX load balancer. [#266](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/266)
 * Added field `SubInterface` to `NetworkConfiguration`. [#321](https://github.com/terraform-providers/terraform-provider-vcd/issues/321)
 * Added methods `Vdc.FindEdgeGatewayNameByNetwork` and `Vdc.GetNetworkList`
 * Added IP set handling functions `CreateNsxvIpSet`, `UpdateNsxvIpSet`, `GetNsxvIpSetByName`,
   `GetNsxvIpSetById`, `GetNsxvIpSetByNameOrId`, `GetAllNsxvIpSets`, `DeleteNsxvIpSetById`,
-  `DeleteNsxvIpSetByName` [#269](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/269)
+  `DeleteNsxvIpSetByName` [#269](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/269)
 * Added `UpdateDhcpRelay`, `GetDhcpRelay` and `ResetDhcpRelay` methods for Edge Gatway DHCP relay
-  management [#271](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/271)
+  management [#271](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/271)
 * Added methods which allow override API versions `NewRequestWitNotEncodedParamsWithApiVersion`, 
    `ExecuteTaskRequestWithApiVersion`, `ExecuteRequestWithoutResponseWithApiVersion`,
-   `ExecuteRequestWithApiVersion` [#274](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/274)
+   `ExecuteRequestWithApiVersion` [#274](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/274)
 
 BUGS FIXED:
 * Remove parentheses from filtering since they weren't treated correctly in some environment [#256]
-  (https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/256)
+  (https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/256)
 * Take into account all subnets (SubnetParticipation) on edge gateway interface instead of the first
-  one [#260](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/260)
+  one [#260](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/260)
 * Fix `OrgVdcNetwork` data structure to retrieve description. Previously, the description would not be retrieved because it was misplaced in the sequence.
 
 ## 2.4.0 (October 28, 2019)
@@ -565,9 +565,9 @@ BUGS FIXED:
 * Added method `VCDClient.QueryProviderVdcs` 
 * Added method `VCDClient.QueryProviderVdcStorageProfiles` 
 * Added method `VCDClient.QueryNetworkPools` 
-* Added get/add/delete metadata functions for vApp template and media item [#225](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/225).
-* Added `UpdateNetworkConnectionSection` for updating VM network configuration [#229](https://gifiltering which in some env wasn'tthub.com/xuanson2406/go-vcloud-director-fptcloud/pull/229)
-* Added `PowerOnAndForceCustomization`, `GetGuestCustomizationStatus`, `BlockWhileGuestCustomizationStatus` [#229](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/229)
+* Added get/add/delete metadata functions for vApp template and media item [#225](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/225).
+* Added `UpdateNetworkConnectionSection` for updating VM network configuration [#229](https://gifiltering which in some env https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/229)
+* Added `PowerOnAndForceCustomization`, `GetGuestCustomizationStatus`, `BlockWhileGuestCustomizationStatus` [#229](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/229)
 * Deprecated methods `AdminOrg.GetAdminVdcByName`, `AdminOrg.GetVdcByName`, `AdminOrg.FindAdminCatalog`, `AdminOrg.FindCatalog`
 * Deprecated methods `Catalog.FindCatalogItem`, `Org.FindCatalog`, `Org.GetVdcByName`
 * Deprecated function `GetExternalNetwork`
@@ -579,29 +579,29 @@ BUGS FIXED:
 * Added methods `AdminOrg.GetVDCByName` and related `GetVDCById`, `GetVDCByNameOrId`
 * Added methods `AdminOrg.GetAdminVDCByName` and related `GetAdminVDCById`, `GetAdminVDCByNameOrId`
 * Added methods `Catalog.Refresh` and `AdminCatalog.Refresh`
-* Added method `vm.GetVirtualHardwareSection` to retrieve virtual hardware items [#200](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/200)
+* Added method `vm.GetVirtualHardwareSection` to retrieve virtual hardware items [#200](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/200)
 * Added methods `vm.SetProductSectionList` and `vm.GetProductSectionList` allowing to manipulate VM
-guest properties [#235](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/235)
+guest properties [#235](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/235)
 * Added methods `vapp.SetProductSectionList` and `vapp.GetProductSectionList` allowing to manipulate
-vApp guest properties [#235](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/235)
+vApp guest properties [#235](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/235)
 * Added method GetStorageProfileByHref
 * Added methods `CreateNsxvNatRule()`, `UpdateNsxvNatRule()`, `GetNsxvNatRuleById()`, `DeleteNsxvNatRuleById()`
-which use the proxied NSX-V API of advanced edge gateway for handling NAT rules [#241](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/241)
-* Added methods `GetVnicIndexByNetworkNameAndType()` and `GetNetworkNameAndTypeByVnicIndex()` [#241](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/241)
+which use the proxied NSX-V API of advanced edge gateway for handling NAT rules [#241](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/241)
+* Added methods `GetVnicIndexByNetworkNameAndType()` and `GetNetworkNameAndTypeByVnicIndex()` [#241](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/241)
 * Added methods `Vdc.GetVappByHref`, `Vdc.GetVAppByName` and related `GetVAppById`, `GetVAppByNameOrId`
 * Added methods `Client.GetVMByHref` `Vapp.GetVAMByName` and related `GetVMById`, `GetVAMByNameOrId`
 * Deprecated methods `Client.FindVMByHREF`, `Vdc.FindVMByName`, `Vdc.FindVAppByID`, and `Vdc.FindVAppByName`
 * Added methods `Vm.GetGuestCustomizationSection` and `Vm.SetGuestCustomizationSection`  
 * Added methods `CreateNsxvFirewallRule()`, `UpdateNsxvFirewallRule()`, `GetNsxvFirewallRuleById()`, `DeleteNsxvFirewallRuleById()`
-which use the proxied NSX-V API of advanced edge gateway for handling firewall rules [#247](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/247)
-* Added methods `GetFirewallParams()`, `UpdateFirewallParams()` for changing global firewall settings [#247](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/247)
-* Added method `GetAnyVnicIndexByNetworkName()` to for easier interface (vNic) lookup in edge gateway [#247](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/247)
-* Added method `ExecuteParamRequestWithCustomError()` which adds query parameter support on top of `ExecuteRequestWithCustomError()` [#247](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/247)
+which use the proxied NSX-V API of advanced edge gateway for handling firewall rules [#247](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/247)
+* Added methods `GetFirewallParams()`, `UpdateFirewallParams()` for changing global firewall settings [#247](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/247)
+* Added method `GetAnyVnicIndexByNetworkName()` to for easier interface (vNic) lookup in edge gateway [#247](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/247)
+* Added method `ExecuteParamRequestWithCustomError()` which adds query parameter support on top of `ExecuteRequestWithCustomError()` [#247](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/247)
 * Deprecated methods `VDC.FindDiskByHREF` and `FindDiskByHREF`
 * Added methods `VDC.GetDiskByHref` `VDC.GetDisksByName` and related `GetDiskById`
-* Added new methods `Catalog.QueryMedia`, `Catalog.GetMediaByName`, `Catalog.GetMediaById`, `Catalog.GetMediaByNameOrId`, `AdminCatalog.QueryMedia`, `AdminCatalog.GetMediaByName`, `AdminCatalog.GetMediaById`, `AdminCatalog.GetMediaByNameOrId`, `MediaRecord.Refresh`, `MediaRecord.Delete`, `MediaRecord.GetMetadata`, `MediaRecord.AddMetadata`, `MediaRecord.AddMetadataAsync`, `MediaRecord.DeleteMetadata`, `MediaRecord.DeleteMetadataAsync`, `Media.GetMetadata`, `Media.AddMetadata`, `Media.AddMetadataAsync`, `Media.DeleteMetadata`, `Media.DeleteMetadataAsync` [#245](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/245)
-* Deprecated methods `Vdc.FindMediaImage`, `MediaItem`, `RemoveMediaImageIfExists`, `MediaItem.Delete`, `FindMediaAsCatalogItem`, `*MediaItem.Refresh`, `MediaItem.GetMetadata`, `MediaItem.AddMetadata`, `MediaItem.AddMetadataAsync`, `MediaItem.DeleteMetadata`, `MediaItem.DeleteMetadataAsync` [#245](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/245)
-* Added method `VDC.QueryDisks` [#255](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/255)
+* Added new methods `Catalog.QueryMedia`, `Catalog.GetMediaByName`, `Catalog.GetMediaById`, `Catalog.GetMediaByNameOrId`, `AdminCatalog.QueryMedia`, `AdminCatalog.GetMediaByName`, `AdminCatalog.GetMediaById`, `AdminCatalog.GetMediaByNameOrId`, `MediaRecord.Refresh`, `MediaRecord.Delete`, `MediaRecord.GetMetadata`, `MediaRecord.AddMetadata`, `MediaRecord.AddMetadataAsync`, `MediaRecord.DeleteMetadata`, `MediaRecord.DeleteMetadataAsync`, `Media.GetMetadata`, `Media.AddMetadata`, `Media.AddMetadataAsync`, `Media.DeleteMetadata`, `Media.DeleteMetadataAsync` [#245](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/245)
+* Deprecated methods `Vdc.FindMediaImage`, `MediaItem`, `RemoveMediaImageIfExists`, `MediaItem.Delete`, `FindMediaAsCatalogItem`, `*MediaItem.Refresh`, `MediaItem.GetMetadata`, `MediaItem.AddMetadata`, `MediaItem.AddMetadataAsync`, `MediaItem.DeleteMetadata`, `MediaItem.DeleteMetadataAsync` [#245](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/245)
+* Added method `VDC.QueryDisks` [#255](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/255)
 
 IMPROVEMENTS:
 
@@ -622,21 +622,21 @@ BUGS FIXED:
 
 BUG FIXES:
 
-* Remove `omitempty` struct tags from load balancer component boolean fields to allow sending `false` values to API [#222](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/222)
+* Remove `omitempty` struct tags from load balancer component boolean fields to allow sending `false` values to API [#222](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/222)
 
 ## 2.3.0 (July 26, 2019)
 
-* Added edge gateway create/delete functions [#130](https://github.com/xuanson2406/go-vcloud-director-fptcloud/issues/130).
-* Added edge gateway global load balancer configuration support (e.g. enable/disable) [#219](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/219)
-* Added load balancer service monitor [#196](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/196)
-* Added load balancer server pool [#205](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/205)
-* Added load balancer application profile [#208](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/208)
-* Added load balancer application rule [#212](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/212)
-* Added load balancer virtual server [#215](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/215)
-* Added functions for refreshing, getting and update Org VDC [#206](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/206)
-* Added VDC meta data create/get/delete functions [#203](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/203)
-* Added org user create/delete/update functions [#18](https://github.com/xuanson2406/go-vcloud-director-fptcloud/issues/18)
-* Added load balancer application profile [#208](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/208)
+* Added edge gateway create/delete functions [#130](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/issues/130).
+* Added edge gateway global load balancer configuration support (e.g. enable/disable) [#219](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/219)
+* Added load balancer service monitor [#196](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/196)
+* Added load balancer server pool [#205](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/205)
+* Added load balancer application profile [#208](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/208)
+* Added load balancer application rule [#212](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/212)
+* Added load balancer virtual server [#215](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/215)
+* Added functions for refreshing, getting and update Org VDC [#206](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/206)
+* Added VDC meta data create/get/delete functions [#203](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/203)
+* Added org user create/delete/update functions [#18](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/issues/18)
+* Added load balancer application profile [#208](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/208)
 * Added edge gateway SNAT/DNAT rule functions which support org VDC network and external network [#225](https://github.com/terraform-providers/terraform-provider-vcd/issues/225)
 * Added edge gateway SNAT/DNAT rule functions which work with IDs [#244](https://github.com/terraform-providers/terraform-provider-vcd/issues/244)
 
@@ -646,9 +646,9 @@ FEATURES:
 
 * Added external network get/create/delete functions
 * Added metadata add/remove functions to VM.
-* Added ability to do vCD version checks and comparison [#174](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/174)
+* Added ability to do vCD version checks and comparison [#174](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/174)
 using VCDClient.APIVCDMaxVersionIs(string) and VCDClient.APIClientVersionIs(string).
-* Added ability to override currently used vCD API version WithAPIVersion(string) [#174](https://github.com/xuanson2406/go-vcloud-director-fptcloud/pull/174).
+* Added ability to override currently used vCD API version WithAPIVersion(string) [#174](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/pull/174).
 * Added ability to enable nested hypervisor option for VM with VM.ToggleNestedHypervisor(bool) [#219](https://github.com/terraform-providers/terraform-provider-vcd/issues/219).
 
 

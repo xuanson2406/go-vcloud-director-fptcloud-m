@@ -1,15 +1,15 @@
-# Contributing to go-vcloud-director-fptcloud
+# Contributing to go-vcloud-director
 
 Welcome! We gladly accept contributions from the community. If you wish
 to contribute code and you have not signed our contributor license
 agreement (CLA), our bot will update the issue when you open a pull
 request. For any questions about the CLA process, please refer to our
-[FAQ](https://cla.xuanson2406.com/faq).
+[FAQ](https://cla.vmware.com/faq).
 
 ## Community
 
-xuanson2406 Cloud Director Go(lang) and Terraform contributors can be found here: 
-https://xuanson2406code.slack.com, #vcd-terraform-dev
+VMware Cloud Director Go(lang) and Terraform contributors can be found here: 
+https://vmwarecode.slack.com, #vcd-terraform-dev
 
 ## Logging Bugs
 
@@ -23,9 +23,9 @@ know of a fix or a workaround include that too.
 We use GitHub pull requests to incorporate code changes from external
 contributors.  Typical contribution flow steps are:
 
-- Fork the go-vcloud-director-fptcloud repo into a new repo on GitHub
-- Clone the forked repo locally and set the original go-vcloud-director-fptcloud repo as the upstream repo
-- Open an Issue in go-vcloud-director-fptcloud describing what you propose to do (unless the change is so trivial that an issue is not needed)
+- Fork the go-vcloud-director repo into a new repo on GitHub
+- Clone the forked repo locally and set the original go-vcloud-director repo as the upstream repo
+- Open an Issue in go-vcloud-director describing what you propose to do (unless the change is so trivial that an issue is not needed)
 - Wait for discussion and possible direction hints in the issue thread
 - Once you know  which steps to take in your intended contribution, make changes in a topic branch and commit (don't forget to add or modify tests too)
 - Update Go modules files `go.mod` and `go.sum` if you're changing dependencies.
@@ -70,27 +70,27 @@ to adapt it to your own work style.
 
 ### Sign the Contributor License Agreement (CLA)
 
-xuanson2406 Apache-licensed projects require all contributors to sign a CLA. 
-Visit https://cla.xuanson2406.com and follow steps presented there. 
+VMware Apache-licensed projects require all contributors to sign a CLA. 
+Visit https://cla.vmware.com and follow steps presented there. 
 
 ### Fork the Repo
 
-Navigate to the [go-vcloud-director-fptcloud repo on
-GitHub](https://github.com/xuanson2406/go-vcloud-director-fptcloud) and use the 'Fork' button to
+Navigate to the [go-vcloud-director repo on
+GitHub](https://github.com/vmware/go-vcloud-director) and use the 'Fork' button to
 create a forked repository under your GitHub account.  This gives you a copy 
-of the repo for pull requests back to go-vcloud-director-fptcloud. 
+of the repo for pull requests back to go-vcloud-director. 
 
 ### Clone and Set Upstream Remote
 
-Make a local clone of the forked repo and add the base go-vcloud-director-fptcloud
+Make a local clone of the forked repo and add the base go-vcloud-director
 repo as the upstream remote repository. The project uses Go modules so the path is up to you.
 
 ``` shell
 
-cd $GOPATH/src/github.com/xuanson2406
-git clone https://github.com/imahacker/go-vcloud-director-fptcloud
-cd go-vcloud-director-fptcloud
-git remote add upstream https://github.com/xuanson2406/go-vcloud-director-fptcloud.git
+cd $GOPATH/src/github.com/vmware
+git clone https://github.com/imahacker/go-vcloud-director
+cd go-vcloud-director
+git remote add upstream https://github.com/vmware/go-vcloud-director.git
 ```
 
 The last git command prepares your clone to pull changes from the
@@ -152,16 +152,16 @@ details.
 
 ### Create a Pull Request
 
-To contribute your feature, create a pull request by going to the [go-vcloud-director-fptcloud upstream repo on GitHub](https://github.com/xuanson2406/go-vcloud-director-fptcloud) and pressing the 'New pull request' button. 
+To contribute your feature, create a pull request by going to the [go-vcloud-director upstream repo on GitHub](https://github.com/vmware/go-vcloud-director) and pressing the 'New pull request' button. 
 
-Select 'compare across forks' and select imahacker/go-vcloud-director-fptcloud as 'head fork'
+Select 'compare across forks' and select imahacker/go-vcloud-director as 'head fork'
 and foo-api-fix-22 as the 'compare' branch.  Leave the base fork as 
-xuanson2406/go-vcloud-director-fptcloud and main. 
+vmware/go-vcloud-director and main. 
 
 ### Wait...
 
 Your pull request will automatically build in [Travis
-CI](https://travis-ci.org/xuanson2406/go-vcloud-director-fptcloud/).  Have a look and correct
+CI](https://travis-ci.org/vmware/go-vcloud-director/).  Have a look and correct
 any failures.
 
 Meanwhile a committer will look the request over and do one of three things: 

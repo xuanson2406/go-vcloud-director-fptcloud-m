@@ -21,6 +21,6 @@ echo ""
 echo ""
 echo "## $VERSION (Unreleased)"
 echo ""
-echo "Changes in progress for v$VERSION are available at [.changes/v$VERSION](https://github.com/xuanson2406/go-vcloud-director-fptcloud/tree/main/.changes/v$VERSION) until the release."
+echo "Changes in progress for v$VERSION are available at [.changes/v$VERSION](https://gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/tree/main/.changes/v$VERSION) until the release."
 echo ""
 
