@@ -13,7 +13,7 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
+	"gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/v2/types/v56"
 )
 
 // catalogTenantContext defines whether we use tenant context during catalog tests.

@@ -10,7 +10,7 @@ package govcd
 import (
 	. "gopkg.in/check.v1"
 
-	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
+	"gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/v2/types/v56"
 )
 
 // Test_LBAppRule tests CRUD methods for load balancer application rule.

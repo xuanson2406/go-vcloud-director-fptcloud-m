@@ -1,4 +1,4 @@
-module github.com/xuanson2406/go-vcloud-director-fptcloud/v2
+module gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/v2
 
 go 1.18
 

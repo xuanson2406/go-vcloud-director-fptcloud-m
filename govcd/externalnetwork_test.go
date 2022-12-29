@@ -13,7 +13,7 @@ import (
 
 	. "gopkg.in/check.v1"
 
-	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
+	"gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/v2/types/v56"
 )
 
 // Retrieves an external network and checks that its contents are filled as expected

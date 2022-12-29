@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
+	"gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/v2/types/v56"
 )
 
 // CreateLbAppProfile creates a load balancer application profile based on mandatory fields. It is a

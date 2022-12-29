@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
-	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/util"
+	"gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/v2/types/v56"
+	"gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/v2/util"
 )
 
 type responseEdgeDhcpLeases struct {

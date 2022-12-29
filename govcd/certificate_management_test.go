@@ -11,7 +11,7 @@ import (
 	_ "embed"
 	"fmt"
 
-	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
+	"gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/v2/types/v56"
 
 	. "gopkg.in/check.v1"
 )

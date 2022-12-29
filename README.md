@@ -37,7 +37,7 @@ To show the SDK in action run the example:
 ```
 mkdir ~/govcd_example
 go mod init govcd_example
-go get github.com/xuanson2406/go-vcloud-director-fptcloud/v2@main
+go get gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/v2@main
 go build -o example
 ./example user_name "password" org_name vcd_IP vdc_name 
 ```
@@ -51,7 +51,7 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/govcd"
+	"gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/v2/govcd"
 )
 
 type Config struct {

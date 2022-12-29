@@ -15,8 +15,8 @@ import (
 	"github.com/araddon/dateparse"
 	semver "github.com/hashicorp/go-version"
 
-	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/types/v56"
-	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/util"
+	"gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/v2/types/v56"
+	"gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/v2/util"
 )
 
 type VersionInfo struct {

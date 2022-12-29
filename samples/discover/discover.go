@@ -48,7 +48,7 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	"github.com/xuanson2406/go-vcloud-director-fptcloud/v2/govcd"
+	"gitlab.fke.fptcloud.com/xplat-fke/go-vcloud-director-fptcloud/v2/govcd"
 )
 
 type Config struct {
